@@ -1,0 +1,58 @@
+/* =================================
+        Banner / WeekDays
+   =================================
+*/
+#Sunday-top{
+    background-image: url("/Web_project/Images/Banner/WeekDays/SUNDAY.jpg");
+}
+#Monday-top{
+    background-image: url("/Web_project/Images/Banner/WeekDays/Monday.jpg");
+}
+#Tuesday-top{
+    background-image: url("/Web_project/Images/Banner/WeekDays/TUESDAY.jpg");
+}
+#Wednesday-top{
+    background-image: url("/Web_project/Images/Banner/WeekDays/WEDNESDAY.jpg");
+}
+#Thuresday-top{
+    background-image: url("/Web_project/Images/Banner/WeekDays/THURSDY.jpg");
+}
+#Friday-top{
+    background-image: url("/Web_project/Images/Banner/WeekDays/Friday.jpg");
+}
+#Saturday-top{
+    background-image: url("/Web_project/Images/Banner/WeekDays/Saturday.jpg");
+}
+
+/* =================================
+       Resturant menus
+   =================================
+*/
+.menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.Restaurant {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.Restaurant img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    padding: 1rem;
+}
+
+/* =================================
+        Restaurant button
+   =================================
+*/
+.button-Restaurant{
+    margin:2rem
+}
