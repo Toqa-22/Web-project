@@ -56,3 +56,364 @@
 .button-Restaurant{
     margin:2rem
 }
+
+
+
+
+/*==========================================================================*/
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; 
+}
+
+
+h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2.8rem;
+    color: #3a3a4e; 
+    margin-bottom: 20px;
+}
+
+/* =================================
+   1. HEADER / NAVIGATION
+   =================================
+*/
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #000000; /* Dark purple/charcoal from video */
+    color: rgb(255, 255, 255);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.logo {
+    height: 40px; /* Adjust size as needed */
+    margin-right: 15px;
+}
+nav {
+  position: relative;
+  z-index: 10;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    text-align:left;
+}
+
+nav li {
+    margin-left: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.822);
+    font-weight: bold;
+    font-size: 1rem;
+    padding-bottom: 5px;
+}
+
+
+a.active {
+    color: rgb(255, 255, 255); 
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+nav a:hover {
+    color: rgb(255, 255, 255) ;
+}
+
+.header-search span {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* =================================
+   2. top SECTION 
+   =================================
+*/
+section.main-top {
+    height: 550px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/pictures/bg-1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* This creates the dark overlay from the image */
+.main-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+}
+
+/* This is the white border box from the image */
+.main-top-content-box {
+    position: relative; /* To sit on top of the overlay */
+    z-index: 1;
+    border: 3px solid white;
+    padding: 2rem 3rem;
+    max-width: 85%;
+}
+
+.main-top-text h1 {
+    font-family: 'Georgia', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+}
+
+.main-top-text h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: white; /* Override default h2 color */
+}
+
+
+/*===================================================================================*/
+section.top {
+    height: 400px; /* A bit less than 100% to show scrolling is possible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    
+    background-size: cover;
+    background-position: center;
+}
+
+/* This creates the dark overlay from the image */
+.top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+}
+
+/* This is the white border box from the image */
+.top-content-box {
+    position: relative; /* To sit on top of the overlay */
+    z-index: 1;
+    border: 3px solid white;
+    padding: 2rem 3rem;
+    max-width: 85%;
+}
+
+.top-text h1 {
+    font-family: 'Georgia', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+}
+
+#announcement-top{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/pictures/bg-3.png');
+}
+#maintenance-top{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/pictures/bg-4.png');
+}
+#locations-top{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/pictures/bg-5.png');
+
+}
+/* =================================
+   3. Body
+   =================================
+*/
+section.section1 {
+    padding: 10px 20px;
+    text-align: center;
+    background-color:  rgb(50, 50, 70); 
+    color: rgb(225, 225, 222);
+}
+
+section.section1 h2 {
+     font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    line-height: 1.6;
+    color:  rgb(225, 225, 222);
+    
+}
+section.section1 p {
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: rgb(225, 225, 222);
+    max-width: 800px;
+    margin: 0 auto auto auto; 
+}
+
+section.section2{
+    padding: 60px 5%; 
+    text-align: center;
+    color:  rgb(50, 50, 70); 
+    background-color: rgb(225, 225, 222);
+    
+}
+
+section.section2 p {
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: rgb(50, 50, 70);
+    max-width: 800px;
+    margin: 0 auto auto auto; 
+    
+    
+}
+
+.gallery-grid {
+    display: grid;
+    /* Creates 4 equal columns */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem; /* Space between images */
+    max-width: 1400px;
+    
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 220px;
+   
+    display: block; /* Removes bottom space */
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+.student-service {
+    background-color:  rgb(50, 50, 70); 
+    padding: 20px 30px;
+}
+
+.student-service h2 {
+    text-align: left; /* Heading is left-aligned */
+    color: rgb(225, 225, 222);
+}
+
+.service-bar {
+    padding: 30px;
+    display: flex;
+    justify-content: space-around; /* Spaces buttons evenly */
+    align-items: center;
+    background-color: rgb(225, 225, 222);
+}
+
+.service-button {
+    flex-basis: 45%; /* Each button takes up 45% of the space */
+    background-color:rgb(50, 50, 70); /* Light grey button color */
+    color: rgb(225, 225, 222);;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px; 
+}
+
+
+.service-button:hover {
+    background-color: rgb(49, 49, 78); 
+    
+}
+
+/*======== Announcement =============================================*/
+
+h2.left-text-align{
+    text-align: left;
+    padding-left: 4rem;
+}
+#announcement-img{
+    width: 800px;
+    height: 800px;
+}
+#announcement-table{
+    text-align: left;
+    font-family: 'Georgia', serif;
+    padding: 5px 30px;
+}
+#report-maintenance {
+    padding: 5px;
+    text-align: center;
+    background-color:  rgb(50, 50, 70); 
+    color: rgb(225, 225, 222);
+}
+
+#report-maintenance a{
+    padding: 5px;
+    text-align: center;
+    background-color:  rgb(50, 50, 70); 
+    color: rgb(225, 225, 222);
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    
+}
+/* ======== locations =================================================*/
+
+
+
+.location {
+  background-color: rgb(225, 225, 222);
+  border-left: 5px solid rgb(50, 50, 70);
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  
+}
+
+.location img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+.location h3 {
+  margin-top: 0;
+  color: rgb(50, 50, 70);
+  font-family: 'Georgia', serif;
+}
+
+
+/* =================================
+   6. FOOTER 
+   =================================
+*/
+.main-footer {
+    background-color: #3a3a4e;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('bg-2.jfif');
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
