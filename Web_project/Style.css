@@ -1,0 +1,25 @@
+/* =================================
+        Banner / WeekDays
+   =================================
+*/
+#Sunday-top{
+    background-image: url("/Web_project/Images/Banner/WeekDays/SUNDAY.jpg");
+}
+#Monday-top{
+    background-image: url("/Web_project/Images/Banner/WeekDays/Monday.jpg");
+}
+#Tuesday-top{
+    background-image: url("/Web_project/Images/Banner/WeekDays/TUESDAY.jpg");
+}
+#Wednesday-top{
+    background-image: url("/Web_project/Images/Banner/WeekDays/WEDNESDAY.jpg");
+}
+#Thuresday-top{
+    background-image: url("/Web_project/Images/Banner/WeekDays/THURSDY.jpg");
+}
+#Friday-top{
+    background-image: url("/Web_project/Images/Banner/WeekDays/Friday.jpg");
+}
+#Saturday-top{
+    background-image: url("/Web_project/Images/Banner/WeekDays/Saturday.jpg");
+}
