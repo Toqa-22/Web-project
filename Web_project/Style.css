@@ -23,3 +23,34 @@
 #Saturday-top{
     background-image: url("/Web_project/Images/Banner/WeekDays/Saturday.jpg");
 }
+
+/* =================================
+       Resturant menus
+   =================================
+*/
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 20px;
+}
+
+.Restaurant {
+    text-align: center;
+     margin: 1em;
+}
+
+.Restaurant img {
+    width: 450px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* =================================
+        Restaurant button
+   =================================
+*/
+.button-Restaurant{
+    margin:2rem
+}
