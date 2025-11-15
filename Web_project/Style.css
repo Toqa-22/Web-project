@@ -1,4 +1,20 @@
 /* =================================
+        Banner
+   =================================
+*/
+#announcement-top{
+    background-image: url("/Web_project/Images/Banner/Announcements.jpg")
+}
+#main-top-banner{
+    background-image: url("/Web_project/Images/Banner/Home.jpg")
+}
+#locations-top{
+    background-image: url("/Web_project/Images/Banner/Locations\ TO\ VISIT.jpg")
+}
+#maintenance-top{
+    background-image: url("/Web_project/Images/Banner/Maintenance.jpg")
+}
+/* =================================
         Banner / WeekDays
    =================================
 */
@@ -236,16 +252,6 @@ section.top {
     margin: 0 0 0.5rem 0;
 }
 
-#announcement-top{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/pictures/bg-3.png');
-}
-#maintenance-top{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/pictures/bg-4.png');
-}
-#locations-top{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/pictures/bg-5.png');
-
-}
 /* =================================
    3. Body
    =================================
