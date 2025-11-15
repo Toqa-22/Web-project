@@ -88,7 +88,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: rgb(244, 244, 244);
+    background-color: rgb(255, 255, 255);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -196,14 +197,12 @@ section.main-top {
 }
 
 .main-top-text h1 {
-    font-family: 'Georgia', serif;
     font-size: 3.5rem;
     font-weight: 700;
 
 }
 
 .main-top-text h2 {
-    font-family: 'Georgia', serif;
     font-size: 2.5rem;
     font-weight: 400;
     color: white;
@@ -224,8 +223,6 @@ section.top {
 }
 
 
-
-
 .top-content-box {
     position: relative;
     border: 3px solid white;
@@ -236,7 +233,6 @@ section.top {
 }
 
 .top-text h1 {
-    font-family: 'Georgia', serif;
     font-size: 3.5rem;
     font-weight: 700;
 
@@ -256,14 +252,12 @@ section.section1 {
 }
 
 section.section1 h2 {
-    font-family: 'Georgia', serif;
     font-size: 2.5rem;
     color: rgb(225, 225, 222);
 
 }
 
 section.section1 p {
-    font-family: 'Georgia', serif;
     font-size: 1.5rem;
     color: rgb(225, 225, 222);
 
@@ -280,14 +274,9 @@ section.section2 {
 }
 
 section.section2 p {
-    font-family: 'Georgia', serif;
     font-size: 1.5rem;
     color: rgb(50, 50, 70);
 }
-
-
-
-
 
 
 .gallery-grid {
@@ -352,7 +341,6 @@ h2.left-text-align {
 
 #announcement-table {
     text-align: left;
-    font-family: 'Georgia', serif;
     padding: 5px 30px;
 }
 
@@ -368,7 +356,6 @@ h2.left-text-align {
     text-align: center;
     background-color: rgb(50, 50, 70);
     color: rgb(225, 225, 222);
-    font-family: 'Georgia', serif;
     font-size: 1rem;
 
 }
@@ -376,7 +363,6 @@ h2.left-text-align {
 /*========= maintanence form =========================================*/
 section.section-form {
     margin: 0;
-    font-family: Arial, sans-serif;
     background: rgb(225, 225, 222);
     color: rgb(50, 50, 70);
     padding: 10px 20px;
@@ -520,7 +506,6 @@ textarea :focus {
 .location h3 {
     margin-top: 0;
     color: rgb(50, 50, 70);
-    font-family: 'Georgia', serif;
 }
 
 
