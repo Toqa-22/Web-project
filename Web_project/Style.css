@@ -135,6 +135,8 @@ nav ul {
     margin: 0;
     padding: 0;
     text-align: left;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 nav li {
