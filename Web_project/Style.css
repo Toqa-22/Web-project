@@ -76,7 +76,8 @@
 
 
 
-/*==========================================================================*/
+
+/*=================================================================*/
 /* Basic Reset */
 * {
     margin: 0;
@@ -87,14 +88,14 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4; 
+    background-color: rgb(244, 244, 244);
 }
 
 
 h2 {
     font-family: 'Georgia', serif;
     font-size: 2.8rem;
-    color: #3a3a4e; 
+    color: rgb(58, 58, 78);
     margin-bottom: 20px;
 }
 
@@ -107,7 +108,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
-    background-color: #000000; /* Dark purple/charcoal from video */
+    background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
 }
 
@@ -119,19 +120,21 @@ h2 {
 }
 
 .logo {
-    height: 40px; /* Adjust size as needed */
+    height: 40px;
     margin-right: 15px;
 }
+
 nav {
-  position: relative;
-  z-index: 10;
+    position: relative;
+    z-index: 10;
 }
+
 nav ul {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
-    text-align:left;
+    text-align: left;
 }
 
 nav li {
@@ -148,12 +151,12 @@ nav a {
 
 
 a.active {
-    color: rgb(255, 255, 255); 
+    color: rgb(255, 255, 255);
     border-bottom: 2px solid rgb(255, 255, 255);
 }
 
 nav a:hover {
-    color: rgb(255, 255, 255) ;
+    color: rgb(255, 255, 255);
 }
 
 .header-search span {
@@ -166,91 +169,78 @@ nav a:hover {
    =================================
 */
 section.main-top {
-    height: 550px; 
+    height: 550px;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     color: white;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/pictures/bg-1.jpg");
     background-size: cover;
     background-position: center;
+    text-align: center;
+
 }
 
-/* This creates the dark overlay from the image */
-.main-top::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-   
-}
 
-/* This is the white border box from the image */
+
+
 .main-top-content-box {
-    position: relative; /* To sit on top of the overlay */
-    z-index: 1;
+    position: relative;
     border: 3px solid white;
     padding: 2rem 3rem;
     max-width: 85%;
+    max-height: 90%;
+    background-color: rgba(0, 0, 0, 0.4);
+
 }
 
 .main-top-text h1 {
     font-family: 'Georgia', serif;
     font-size: 3.5rem;
     font-weight: 700;
-    margin: 0 0 0.5rem 0;
+
 }
 
 .main-top-text h2 {
     font-family: 'Georgia', serif;
     font-size: 2.5rem;
     font-weight: 400;
-    color: white; /* Override default h2 color */
+    color: white;
 }
 
 
 /*===================================================================================*/
 section.top {
-    height: 400px; /* A bit less than 100% to show scrolling is possible */
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
-    
     background-size: cover;
     background-position: center;
+
 }
 
-/* This creates the dark overlay from the image */
-.top::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-   
-}
 
-/* This is the white border box from the image */
+
+
 .top-content-box {
-    position: relative; /* To sit on top of the overlay */
-    z-index: 1;
+    position: relative;
     border: 3px solid white;
     padding: 2rem 3rem;
     max-width: 85%;
+    max-height: 90%;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .top-text h1 {
     font-family: 'Georgia', serif;
     font-size: 3.5rem;
     font-weight: 700;
-    margin: 0 0 0.5rem 0;
+
 }
+
+
 
 /* =================================
    3. Body
@@ -259,194 +249,176 @@ section.top {
 section.section1 {
     padding: 10px 20px;
     text-align: center;
-    background-color:  rgb(50, 50, 70); 
+    background-color: rgb(50, 50, 70);
     color: rgb(225, 225, 222);
 }
 
 section.section1 h2 {
-     font-family: 'Georgia', serif;
+    font-family: 'Georgia', serif;
     font-size: 2.5rem;
-    line-height: 1.6;
-    color:  rgb(225, 225, 222);
-    
+    color: rgb(225, 225, 222);
+
 }
+
 section.section1 p {
     font-family: 'Georgia', serif;
     font-size: 1.5rem;
-    line-height: 1.6;
     color: rgb(225, 225, 222);
-    max-width: 800px;
-    margin: 0 auto auto auto; 
+
 }
 
-section.section2{
-    padding: 60px 5%; 
+
+
+section.section2 {
+    padding: 60px 5%;
     text-align: center;
-    color:  rgb(50, 50, 70); 
+    color: rgb(50, 50, 70);
     background-color: rgb(225, 225, 222);
-    
+
 }
 
 section.section2 p {
     font-family: 'Georgia', serif;
     font-size: 1.5rem;
-    line-height: 1.6;
     color: rgb(50, 50, 70);
-    max-width: 800px;
-    margin: 0 auto auto auto; 
-    
-    
 }
+
+
+
+
+
 
 .gallery-grid {
     display: grid;
-    /* Creates 4 equal columns */
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem; /* Space between images */
+    gap: 1rem;
     max-width: 1400px;
-    
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .gallery-grid img {
     width: 100%;
     height: 220px;
-   
-    display: block; /* Removes bottom space */
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: block;
+    border: 1px solid rgb(204, 204, 204);
+
 }
 
 
 .student-service {
-    background-color:  rgb(50, 50, 70); 
+    background-color: rgb(50, 50, 70);
     padding: 20px 30px;
 }
 
-.student-service h2 {
-    text-align: left; /* Heading is left-aligned */
-    color: rgb(225, 225, 222);
-}
 
 .service-bar {
     padding: 30px;
     display: flex;
-    justify-content: space-around; /* Spaces buttons evenly */
+    justify-content: space-around;
     align-items: center;
     background-color: rgb(225, 225, 222);
 }
 
 .service-button {
-    flex-basis: 45%; /* Each button takes up 45% of the space */
-    background-color:rgb(50, 50, 70); /* Light grey button color */
-    color: rgb(225, 225, 222);;
+    width: 300px;
+    background-color: rgb(50, 50, 70);
+    color: rgb(225, 225, 222);
     padding: 15px 20px;
     text-align: center;
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: bold;
-    border-radius: 5px; 
+    border-radius: 5px;
 }
 
 
 .service-button:hover {
-    background-color: rgb(49, 49, 78); 
-    
+    background-color: rgb(49, 49, 78);
+
 }
 
 /*======== Announcement =============================================*/
 
-h2.left-text-align{
+h2.left-text-align {
     text-align: left;
     padding-left: 4rem;
 }
-#announcement-img{
+
+#announcement-img {
     width: 800px;
     height: 800px;
 }
-#announcement-table{
+
+#announcement-table {
     text-align: left;
     font-family: 'Georgia', serif;
     padding: 5px 30px;
 }
+
 #report-maintenance {
     padding: 5px;
     text-align: center;
-    background-color:  rgb(50, 50, 70); 
+    background-color: rgb(50, 50, 70);
     color: rgb(225, 225, 222);
 }
 
-#report-maintenance a{
+#report-maintenance a {
     padding: 5px;
     text-align: center;
-    background-color:  rgb(50, 50, 70); 
+    background-color: rgb(50, 50, 70);
     color: rgb(225, 225, 222);
     font-family: 'Georgia', serif;
     font-size: 1rem;
-    
+
 }
-/*========= maintenance form =========================================*/
-section.section-form{
+
+/*========= maintanence form =========================================*/
+section.section-form {
     margin: 0;
     font-family: Arial, sans-serif;
     background: rgb(225, 225, 222);
-    color: #202124;
+    color: rgb(50, 50, 70);
     padding: 10px 20px;
 }
+
 .form-header {
     max-width: 760px;
     margin: 32px auto 0px auto;
-    padding: 15px 24px 5px 24px ;
-    background: #fff;
+    padding: 15px 24px 5px 24px;
+    background: rgb(255, 255, 255);
     border: 1px solid rgb(225, 225, 222);
     border-radius: 8px 8px 0 0;
-    border-top: 10px solid RGB(255, 0, 255);
+    border-top: 10px solid rgb(50, 50, 70);
 
 }
 
 .form-header-note {
     max-width: 760px;
     margin: 0 auto;
-    padding:5px 24px;
-    background: #fff;
-    border: .5px solid rgb(225, 225, 222);
-    
+    padding: 5px 24px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(225, 225, 222);
+
 }
+
 .required-note {
     font-size: 13px;
-    color: #d93025;
+    color: rgb(217, 48, 37);
 
 }
 
 .form-header h1 {
-    margin: 0 0 8px;
     font-size: 24px;
     font-weight: 600;
 }
 
-.subtitle {
-    color:  #5f6368;
-    font-size: 14px;
-}
-
-.form-data-type{
-    max-width: 760px;
-    background: RGB(255, 0, 255);
-    margin: 27px auto 0 auto;
-    border: 1px solid #dadce0;
-    color:#000000;
-    border-radius: 8px 8px 0 0;
-    padding: 10px 24px ; 
-}
 
 .form-container {
     max-width: 760px;
-    margin:0 auto 32px ;
-    background: #fff;
-    border: 1px solid #dadce0;
-    border-top: none;
+    margin: 0 auto 32px;
+    background: rgb(255, 255, 255);
+    border: 1px solid (225, 225, 222);
     border-radius: 0 0 8px 8px;
-    padding: 15px 24px 0px 24px ;
+    padding: 15px 24px;
 }
 
 
@@ -455,129 +427,98 @@ h2 {
 
 }
 
-
-
-.form-field {
+.form-content {
     margin-bottom: 20px;
+    display: block;
+    font-size: 14px;
+
 }
 
-.form-field label {
-    display: block;
-    margin-bottom: 6px;
-    font-size: 14px;
-}
 
 .required {
-    color: #d93025;
+    color: rgb(217, 48, 37);
 }
 
+textarea,
 input[type="text"] {
     width: 100%;
     padding: 10px;
     font-size: 14px;
-    border: 1px solid #dadce0;
+    border: 1px solid rgb(225, 225, 222);
     border-radius: 4px;
 }
 
 input:focus {
-    outline: 3px solid rgba(26, 115, 232, 0.2);
-    border-color: var(--link);
+    outline: 2px solid rgb(225, 225, 222);
+    border-color: rgb(50, 50, 70);
+
 }
+
+textarea :focus {
+    outline: 2px solid rgb(225, 225, 222);
+    border-color: rgb(50, 50, 70);
+}
+
 
 .form-actions {
     display: flex;
     gap: 12px;
-    margin: 32px auto 0 auto;
+    margin: 25px auto;
     max-width: 760px;
 }
 
-.btn {
-    padding: 8px 16px;
-    font-size: 14px;
-    border-radius: 4px;
-    border: 1px solid transparent;
-    cursor: pointer;
-}
 
-.btn-primary {
-    color: RGB(255, 0, 255);
-    background-color: #fff;
-}
-
-.btn-secondary {
-    background: #f1f3f4;
-    color: #202124;;
-}
-
-.btn-primary[disabled] {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
 
 .btn-link {
     background: none;
     border: none;
-    color: RGB(255, 0, 255);
+    color: rgb(50, 50, 70);
+    cursor: pointer;
+    margin-right: auto;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+.btn-submit {
+    background-color: rgb(50, 50, 70);
+    border: none;
+    color: rgb(225, 225, 222);
     cursor: pointer;
     margin-left: auto;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2.5px;
+    padding: 10px 20px;
+
 }
 
-.disclaimer,
-.footer-note {
-    font-size: 12px;
-    color:  #5f6368;
-    margin-top: 16px;
-    text-align: center;
-}
 
-.form-footer {
-    max-width: 760px;
-    margin: 20px auto 20px;
-    font-size: 13px;
-    color:  #5f6368;
-   
-    
-}
-
-.footer-links {
-    display: flex;
-    gap: 8px;
-    
-}
-
-.footer-links a {
-    color:  #5f6368;
-    text-decoration: none;
-    text-align: center;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
 /* ======== locations =================================================*/
 
 
 
 .location {
-  background-color: rgb(225, 225, 222);
-  border-left: 5px solid rgb(50, 50, 70);
-  padding: 1rem 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  
+    background-color: rgb(225, 225, 222);
+    border-left: 5px solid rgb(50, 50, 70);
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
 }
 
 .location img {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 1rem;
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1rem;
 }
+
 .location h3 {
-  margin-top: 0;
-  color: rgb(50, 50, 70);
-  font-family: 'Georgia', serif;
+    margin-top: 0;
+    color: rgb(50, 50, 70);
+    font-family: 'Georgia', serif;
 }
 
 
@@ -590,5 +531,8 @@ input:focus {
     text-align: center;
     padding: 25px;
     background-image: url("/Web_project/Images/footer.jpg");
-
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin: 0;
 }
