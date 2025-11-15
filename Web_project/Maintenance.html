@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SQU Student Campus Housing - Announcements</title>
+    <title>SQU Student Campus Housing - Maintenance</title>
     <link rel="stylesheet" href="/Web_project/Style.css">
 </head>
 
@@ -12,7 +12,7 @@
 
     <header class="main-header">
         <div class="logo-container">
-            <img src="/pictures/logo.jpg" alt="SQU Logo" class="logo">
+            <img src="/Web_project/Images/logo_img/logo.jpg" alt="SQU Logo" class="logo">
             <span>SQU Student Campus</span>
         </div>
         
@@ -45,10 +45,60 @@
             </div>
         </div>
     </section>
-    <section class="section2">
-        <form>
+    <section class="section-form">
+        <section class="form-header">
+            <h1>Campus Housing Room Maintenance Request – Female Students</h1>
+            <p>Please use this form to report any maintenance issues in your room. Accurate and detailed
+                information will help our staff resolve issues quickly. </p>
+        </section>
+        <section class="form-header-note">
+            <p class="subtitle">Sign in to Google to save your progress. Learn more</p>
+        </section>
+        <section class="form-header-note">
+            <p class="required-note">* Indicates required question</p>
+        </section>
+        <section class="form-data-type">
+            <h2>Information </h2>
+        </section>
+        <section class="form-container">
+            <form action="#" method="post">
 
-        </form>
+                <div class="form-field">
+                    <label for="full-name">Full Name <span class="required">*</span></label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Your answer">
+                </div>
+
+                <div class="form-field">
+                    <label for="student-id">Student ID <span class="required">*</span></label>
+                    <input type="text" id="student-id" name="student-id" placeholder="Your answer">
+                </div>
+
+                <div class="form-field">
+                    <label for="room-number">Room Number <span class="required">*</span></label>
+                    <input type="text" id="room-number" name="room-number" placeholder="Your answer">
+                </div>
+
+
+            </form>
+        </section>
+        <section class="form-actions">
+            <button type="button" class="btn btn-primary" disabled>Back</button>
+            <button type="button" class="btn btn-primary">Next</button>
+            <button type="reset" class="btn btn-link">Clear form</button>
+        </section>
+
+        <p class="disclaimer">Never submit passwords through forms.</p>
+        <p class="footer-note">This form was created inside of Sultan Qaboos University.</p>
+
+        <section class="form-footer">
+            <nav class="footer-links">
+                <a href="#">Does this form look suspicious? Report</a>
+                <span>•</span>
+                <a href="#">Forms</a>
+                <span>•</span>
+                <a href="#">Help and feedback</a>
+            </nav>
+        </section>
     </section>
 
     <footer class="main-footer">
@@ -57,3 +107,4 @@
     </body>
     
 </html>
+
