@@ -586,9 +586,9 @@ input:focus {
    =================================
 */
 .main-footer {
-    background-color: #3a3a4e;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('bg-2.jfif');
     color: white;
     text-align: center;
     padding: 25px;
+    background-image: url("/Web_project/Images/footer.jpg");
+
 }
