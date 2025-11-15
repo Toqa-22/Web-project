@@ -76,6 +76,7 @@
 
 
 
+
 /*=================================================================*/
 /* Basic Reset */
 * {
@@ -87,14 +88,14 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: rgb(244, 244, 244);
 }
 
 
 h2 {
     font-family: 'Georgia', serif;
     font-size: 2.8rem;
-    color: #3a3a4e;
+    color: rgb(58, 58, 78);
     margin-bottom: 20px;
 }
 
@@ -107,7 +108,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
-    background-color: #000000;
+    background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
 }
 
@@ -173,9 +174,10 @@ section.main-top {
     justify-content: center;
     align-items: center;
     color: white;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/pictures/bg-1.jpg");
     background-size: cover;
     background-position: center;
+    text-align: center;
+
 }
 
 
@@ -183,17 +185,19 @@ section.main-top {
 
 .main-top-content-box {
     position: relative;
-    z-index: 1;
     border: 3px solid white;
     padding: 2rem 3rem;
     max-width: 85%;
+    max-height: 90%;
+    background-color: rgba(0, 0, 0, 0.4);
+
 }
 
 .main-top-text h1 {
     font-family: 'Georgia', serif;
     font-size: 3.5rem;
     font-weight: 700;
-    margin: 0 0 0.5rem 0;
+
 }
 
 .main-top-text h2 {
@@ -212,9 +216,9 @@ section.top {
     align-items: center;
     text-align: center;
     color: white;
-
     background-size: cover;
     background-position: center;
+
 }
 
 
@@ -222,31 +226,21 @@ section.top {
 
 .top-content-box {
     position: relative;
-    z-index: 1;
     border: 3px solid white;
     padding: 2rem 3rem;
     max-width: 85%;
+    max-height: 90%;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .top-text h1 {
     font-family: 'Georgia', serif;
     font-size: 3.5rem;
     font-weight: 700;
-    margin: 0 0 0.5rem 0;
-}
-
-#announcement-top {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/pictures/bg-3.png');
-}
-
-#maintenance-top {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/pictures/bg-4.png');
-}
-
-#locations-top {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/pictures/bg-5.png');
 
 }
+
+
 
 /* =================================
    3. Body
@@ -262,7 +256,6 @@ section.section1 {
 section.section1 h2 {
     font-family: 'Georgia', serif;
     font-size: 2.5rem;
-    line-height: 1.6;
     color: rgb(225, 225, 222);
 
 }
@@ -270,11 +263,11 @@ section.section1 h2 {
 section.section1 p {
     font-family: 'Georgia', serif;
     font-size: 1.5rem;
-    line-height: 1.6;
     color: rgb(225, 225, 222);
-    max-width: 800px;
-    margin: 0 auto auto auto;
+
 }
+
+
 
 section.section2 {
     padding: 60px 5%;
@@ -287,21 +280,19 @@ section.section2 {
 section.section2 p {
     font-family: 'Georgia', serif;
     font-size: 1.5rem;
-    line-height: 1.6;
     color: rgb(50, 50, 70);
-    max-width: 800px;
-    margin: 0 auto auto auto;
-
-
 }
+
+
+
+
+
 
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     max-width: 1400px;
-
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .gallery-grid img {
@@ -309,7 +300,7 @@ section.section2 p {
     height: 220px;
     display: block;
     border: 1px solid rgb(204, 204, 204);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
 }
 
 
@@ -318,10 +309,6 @@ section.section2 p {
     padding: 20px 30px;
 }
 
-.student-service h2 {
-    text-align: left;
-    color: rgb(225, 225, 222);
-}
 
 .service-bar {
     padding: 30px;
@@ -332,10 +319,9 @@ section.section2 p {
 }
 
 .service-button {
-    flex-basis: 45%;
+    width: 300px;
     background-color: rgb(50, 50, 70);
     color: rgb(225, 225, 222);
-    ;
     padding: 15px 20px;
     text-align: center;
     text-decoration: none;
@@ -390,7 +376,7 @@ section.section-form {
     margin: 0;
     font-family: Arial, sans-serif;
     background: rgb(225, 225, 222);
-    color: #202124;
+    color: rgb(50, 50, 70);
     padding: 10px 20px;
 }
 
@@ -398,10 +384,10 @@ section.section-form {
     max-width: 760px;
     margin: 32px auto 0px auto;
     padding: 15px 24px 5px 24px;
-    background: #fff;
+    background: rgb(255, 255, 255);
     border: 1px solid rgb(225, 225, 222);
     border-radius: 8px 8px 0 0;
-    border-top: 10px solid RGB(255, 0, 255);
+    border-top: 10px solid rgb(50, 50, 70);
 
 }
 
@@ -409,46 +395,30 @@ section.section-form {
     max-width: 760px;
     margin: 0 auto;
     padding: 5px 24px;
-    background: #fff;
-    border: .5px solid rgb(225, 225, 222);
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(225, 225, 222);
 
 }
 
 .required-note {
     font-size: 13px;
-    color: #d93025;
+    color: rgb(217, 48, 37);
 
 }
 
 .form-header h1 {
-    margin: 0 0 8px;
     font-size: 24px;
     font-weight: 600;
 }
 
-.subtitle {
-    color: #5f6368;
-    font-size: 14px;
-}
-
-.form-data-type {
-    max-width: 760px;
-    background: RGB(255, 0, 255);
-    margin: 27px auto 0 auto;
-    border: 1px solid #dadce0;
-    color: #000000;
-    border-radius: 8px 8px 0 0;
-    padding: 10px 24px;
-}
 
 .form-container {
     max-width: 760px;
     margin: 0 auto 32px;
-    background: #fff;
-    border: 1px solid #dadce0;
-    border-top: none;
+    background: rgb(255, 255, 255);
+    border: 1px solid (225, 225, 222);
     border-radius: 0 0 8px 8px;
-    padding: 15px 24px 0px 24px;
+    padding: 15px 24px;
 }
 
 
@@ -457,39 +427,43 @@ h2 {
 
 }
 
-
-
-.form-field {
+.form-content {
     margin-bottom: 20px;
+    display: block;
+    font-size: 14px;
+
 }
 
-.form-field label {
-    display: block;
-    margin-bottom: 6px;
-    font-size: 14px;
-}
 
 .required {
-    color: #d93025;
+    color: rgb(217, 48, 37);
 }
 
+textarea,
 input[type="text"] {
     width: 100%;
     padding: 10px;
     font-size: 14px;
-    border: 1px solid #dadce0;
+    border: 1px solid rgb(225, 225, 222);
     border-radius: 4px;
 }
 
 input:focus {
-    outline: 3px solid rgba(26, 115, 232, 0.2);
-    border-color: var(--link);
+    outline: 2px solid rgb(225, 225, 222);
+    border-color: rgb(50, 50, 70);
+
 }
+
+textarea :focus {
+    outline: 2px solid rgb(225, 225, 222);
+    border-color: rgb(50, 50, 70);
+}
+
 
 .form-actions {
     display: flex;
     gap: 12px;
-    margin: 32px auto 0 auto;
+    margin: 25px auto;
     max-width: 760px;
 }
 
@@ -498,43 +472,27 @@ input:focus {
 .btn-link {
     background: none;
     border: none;
-    color: RGB(255, 0, 255);
+    color: rgb(50, 50, 70);
+    cursor: pointer;
+    margin-right: auto;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+.btn-submit {
+    background-color: rgb(50, 50, 70);
+    border: none;
+    color: rgb(225, 225, 222);
     cursor: pointer;
     margin-left: auto;
-}
-
-.disclaimer,
-.footer-note {
-    font-size: 12px;
-    color: #5f6368;
-    margin-top: 16px;
-    text-align: center;
-}
-
-.form-footer {
-    max-width: 760px;
-    margin: 20px auto 20px;
-    font-size: 13px;
-    color: #5f6368;
-
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2.5px;
+    padding: 10px 20px;
 
 }
 
-.footer-links {
-    display: flex;
-    gap: 8px;
-
-}
-
-.footer-links a {
-    color: #5f6368;
-    text-decoration: none;
-    text-align: center;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
 
 /* ======== locations =================================================*/
 
@@ -569,10 +527,11 @@ input:focus {
    =================================
 */
 .main-footer {
-    background-color: #3a3a4e;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('');
+    background-color: rgb(58, 58, 78);
+    background-image: url('');
     color: white;
     text-align: center;
     padding: 25px;
     margin: 0;
+
 }
