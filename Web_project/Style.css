@@ -322,6 +322,7 @@ section.section2 p {
     font-size: 1.1rem;
     font-weight: bold;
     border-radius: 5px;
+    margin:2rem
 }
 
 
@@ -345,6 +346,7 @@ h2.left-text-align {
 #announcement-table {
     text-align: left;
     padding: 5px 30px;
+    margin: 1rem;
 }
 
 #report-maintenance {
@@ -352,6 +354,7 @@ h2.left-text-align {
     text-align: center;
     background-color: rgb(50, 50, 70);
     color: rgb(225, 225, 222);
+    
 }
 
 #report-maintenance a {
@@ -360,7 +363,6 @@ h2.left-text-align {
     background-color: rgb(50, 50, 70);
     color: rgb(225, 225, 222);
     font-size: 1rem;
-
 }
 
 /*========= maintanence form =========================================*/
@@ -481,6 +483,7 @@ textarea :focus {
     font-weight: bold;
     border-radius: 2.5px;
     padding: 10px 20px;
+    
 
 }
 
