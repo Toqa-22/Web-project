@@ -1,1 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
 
+  <head>
+      <meta name="viewport" content="width=device-width">
+      <title>SQU Restaurant Survey</title>
+      <link rel="stylesheet" href="Style.css">
+  
+  
+  </head>
+  
+  <body>
+  
+  
+      <header class="main-header">
+          <div class="logo-container">
+              <img src="Images/logo_img/logo.jpg" class="logo" alt="Logo">
+              <span>SQU Student Campus</span>
+          </div>
+  
+          <nav>
+              <ul>
+                  <li><a href="/Web_project/index.html">Home</a></li>
+                  <li><a href="/Web_project/Restaurant.html" class="active">Restaurant</a></li>
+                  <li><a href="/Web_project/Announcements.html">Announcements</a></li>
+                  <li><a href="/Web_project/Maintenance.html">Maintenance</a></li>
+                  <li><a href="/Web_project/Locations.html">Locations</a></li>
+                  <li><a href="/Web_project/Events.html">Events</a></li>
+                  <li><a href="/Web_project/About us.html">About Us</a></li>
+                  <li><a href="/Web_project/Contact Us.html">Contact Us</a></li>
+              </ul>
+          </nav>
+  
+          <div class="header-search">
+              <span>🔍</span>
+          </div>
+      </header>
+  
+  
+  
+      <section class="top" id="Restaurant-top" style="background-image:url('/Web_project/Images/Banner/Restaurant.jpg')">
+          <div class="top-content-box">
+              <div class="top-text">
+                  <h1>Restaurant Survey</h1>
+              </div>
+          </div>
+      </section>
+  
+  
+  
+      <section class="section-form">
+  
+          <div class="form-header">
+              <h1>Survey: Food at the Girls Complex Restaurant – SQU</h1>
+          </div>
+  
+          <div class="form-header-note">
+              <p>Your feedback will help improve the food quality and dining experience 🍽💬</p>
+          </div>
+  
+  
+          <form action="mailto:campus.restaurant@outlook.com" method="post" enctype="text/plain">
+  
+              <div class="form-container">
+  
+                  <h2>Section 1: About You</h2>
+  
+                  <div class="form-content">
+                      <p>What is your college?</p>
+  
+                      <label><input type="radio" name="college"> College of Science</label><br>
+                      <label><input type="radio" name="college"> College of Engineering</label><br>
+                      <label><input type="radio" name="college"> College of Education</label><br>
+                      <label><input type="radio" name="college"> College of Nursing</label><br>
+                      <label><input type="radio" name="college"> College of Medicine and Health Sciences</label><br>
+                      <label><input type="radio" name="college"> College of Arts & Social Sciences</label><br>
+                      <label><input type="radio" name="college"> College of Law</label><br>
+                  </div>
+  
+                  <div class="form-content">
+                      <p>What is your academic year?</p>
+  
+                      <label><input type="radio" name="year"> Foundation</label><br>
+                      <label><input type="radio" name="year"> Year 1</label><br>
+                      <label><input type="radio" name="year"> Year 2</label><br>
+                      <label><input type="radio" name="year"> Year 3</label><br>
+                      <label><input type="radio" name="year"> Year 4</label><br>
+                      <label><input type="radio" name="year"> Other</label><br>
+                  </div>
+  
+  
+  
+                  <h2>Section 2: Food Quality and Taste</h2>
+  
+                  <div class="form-content">
+                      <p>How often do you eat at the restaurant?</p>
+                      <label><input type="radio" name="freq"> Every day</label><br>
+                      <label><input type="radio" name="freq"> A few times a week</label><br>
+                      <label><input type="radio" name="freq"> Once a week</label><br>
+                      <label><input type="radio" name="freq"> Rarely</label><br>
+                  </div>
+  
+                  <div class="form-content">
+                      <p>Rate the overall food quality (1–5)</p>
+                      <label><input type="radio" name="quality"> 1</label>
+                      <label><input type="radio" name="quality"> 2</label>
+                      <label><input type="radio" name="quality"> 3</label>
+                      <label><input type="radio" name="quality"> 4</label>
+                      <label><input type="radio" name="quality"> 5</label>
+                  </div>
+  
+                  <div class="form-content">
+                      <p>Rate the taste of the food (1–5)</p>
+                      <label><input type="radio" name="taste"> 1</label>
+                      <label><input type="radio" name="taste"> 2</label>
+                      <label><input type="radio" name="taste"> 3</label>
+                      <label><input type="radio" name="taste"> 4</label>
+                      <label><input type="radio" name="taste"> 5</label>
+                  </div>
+  
+  
+  
+                  <h2>Section 3: Preferences & Suggestions</h2>
+  
+                  <div class="form-content">
+                      <p>What type of food would you like to see more often?</p>
+  
+                      <label><input type="radio" name="food"> Omani food</label><br>
+                      <label><input type="radio" name="food"> Indian food</label><br>
+                      <label><input type="radio" name="food"> Arabic food</label><br>
+                      <label><input type="radio" name="food"> Asian food</label><br>
+                      <label><input type="radio" name="food"> Vegetarian food</label><br>
+                      <label><input type="radio" name="food"> Healthy food</label><br>
+                  </div>
+  
+                  <div class="form-content">
+                      <p>What drinks or desserts do you prefer?</p>
+                      <input type="text" placeholder="Short answer">
+                  </div>
+  
+                  <div class="form-content">
+                      <p>What improvements would you suggest?</p>
+                      <textarea rows="5" placeholder="Your suggestions..."></textarea>
+                  </div>
+  
+  
+                  <div class="form-actions">
+                      <button class="btn-submit" type="submit">Submit</button>
+                  </div>
+  
+              </div>
+      </section>
+  
+      </form>
+  
+  
+      <footer class="main-footer">
+          <p>&copy; 2025 Student Complex</p>
+      </footer>
+  
+  </body>
+
+
+
+
+
+</html>
