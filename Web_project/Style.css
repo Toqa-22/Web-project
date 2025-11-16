@@ -87,7 +87,7 @@
 
 
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(225, 225, 222);
     font-family:Georgia, Times, 'Times New Roman', serif;
     line-height: 1.5;
 }
@@ -124,10 +124,6 @@ h2 {
     margin-right: 15px;
 }
 
-nav {
-    position: relative;
-    z-index: 10;
-}
 
 nav ul {
     list-style: none;
@@ -179,7 +175,7 @@ section.main-top {
     background-size: cover;
     background-position: center;
     text-align: center;
-
+    position: sticky;
 }
 
 
@@ -196,13 +192,13 @@ section.main-top {
 }
 
 .main-top-text h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
 
 }
 
 .main-top-text h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 400;
     color: white;
 }
@@ -228,7 +224,6 @@ section.top {
     padding: 2rem 3rem;
     max-width: 85%;
     max-height: 90%;
-    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .top-text h1 {
@@ -240,7 +235,7 @@ section.top {
 
 
 /* =================================
-   3. Body
+    Body
    =================================
 */
 section.section1 {
@@ -305,7 +300,7 @@ section.section2 p {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(225, 225, 222);
+    
 }
 
 .service-button {
