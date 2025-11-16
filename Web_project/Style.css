@@ -3,53 +3,53 @@
    =================================
 */
 #announcement-top{
-    background-image: url("/Web_project/Images/Banner/Announcements.jpg")
+    background-image: url("Images/Banner/Announcements.jpg")
 }
 #main-top-banner{
-    background-image: url("/Web_project/Images/Banner/Home.jpg")
+    background-image: url("Images/Banner/Home.jpg")
 }
 #locations-top{
-    background-image: url("/Web_project/Images/Banner/Locations\ TO\ VISIT.jpg")
+    background-image: url("Images/Banner/Locations\ TO\ VISIT.jpg")
 }
 #maintenance-top{
-    background-image: url("/Web_project/Images/Banner/Maintenance.jpg")
+    background-image: url("Images/Banner/Maintenance.jpg")
 }
 #about-us-banner{
-    background-image: url("/Web_project/Images/Banner/ABOUT\ UA.jpg")
+    background-image: url("Images/Banner/ABOUT\ UA.jpg")
 }
 #restaurant-top{
-    background-image: url("/Web_project/Images/Banner/Restaurant.jpg")
+    background-image: url("Images/Banner/Restaurant.jpg")
 }
 #contact-us-banner{
-    background-image: url("/Web_project/Images/Banner/CONTACT\ US.jpg")
+    background-image: url("Images/Banner/CONTACT\ US.jpg")
 }
 #event-banner{
-    background-image: url("/Web_project/Images/Banner/EVENTS.jpg")
+    background-image: url("Images/Banner/EVENTS.jpg")
 }
 /* =================================
         Banner / WeekDays
    =================================
 */
 #Sunday-top{
-    background-image: url("/Web_project/Images/Banner/WeekDays/SUNDAY.jpg");
+    background-image: url("Images/Banner/WeekDays/SUNDAY.jpg");
 }
 #Monday-top{
-    background-image: url("/Web_project/Images/Banner/WeekDays/Monday.jpg");
+    background-image: url("Images/Banner/WeekDays/Monday.jpg");
 }
 #Tuesday-top{
-    background-image: url("/Web_project/Images/Banner/WeekDays/TUESDAY.jpg");
+    background-image: url("Images/Banner/WeekDays/TUESDAY.jpg");
 }
 #Wednesday-top{
-    background-image: url("/Web_project/Images/Banner/WeekDays/WEDNESDAY.jpg");
+    background-image: url("Images/Banner/WeekDays/WEDNESDAY.jpg");
 }
 #Thuresday-top{
-    background-image: url("/Web_project/Images/Banner/WeekDays/THURSDY.jpg");
+    background-image: url("Images/Banner/WeekDays/THURSDY.jpg");
 }
 #Friday-top{
-    background-image: url("/Web_project/Images/Banner/WeekDays/Friday.jpg");
+    background-image: url("Images/Banner/WeekDays/Friday.jpg");
 }
 #Saturday-top{
-    background-image: url("/Web_project/Images/Banner/WeekDays/Saturday.jpg");
+    background-image: url("Images/Banner/WeekDays/Saturday.jpg");
 }
 
 /* =================================
@@ -523,7 +523,7 @@ textarea :focus {
     color: white;
     text-align: center;
     padding: 25px;
-    background-image: url("/Web_project/Images/footer.jpg");
+    background-image: url("Images/footer.jpg");
     color: white;
     text-align: center;
     padding: 25px;
