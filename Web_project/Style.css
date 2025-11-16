@@ -14,6 +14,15 @@
 #maintenance-top{
     background-image: url("/Web_project/Images/Banner/Maintenance.jpg")
 }
+#about-us-banner{
+    background-image: url("/Web_project/Images/Banner/ABOUT\ UA.jpg")
+}
+#restaurant-top{
+    background-image: url("/Web_project/Images/Banner/Restaurant.jpg")
+}
+#contact-us-banner{
+    background-image: url("/Web_project/Images/Banner/CONTACT\ US.jpg")
+}
 /* =================================
         Banner / WeekDays
    =================================
