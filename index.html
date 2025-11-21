@@ -18,52 +18,52 @@
     </script>
 </head>
 <style>
-    .section2 {
-    display: flex;
-    justify-content: center; 
-    gap: 20px; 
-    flex-wrap: wrap;
-    padding: 20px;
-}
-
-.service-button {
-    display: inline-block;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 18px;
-    text-align: center;
-    min-width: 200px;
-    box-sizing: border-box;
-}
-
+    .main-footer {
+        background-image: url("/Web_project/Images/footer.jpg");
+        color: white;
+        text-align: center;
+        padding: 25px;
+    }
+    body {
+            background-color: rgb(225, 225, 222);
+            font-family:Georgia, Times, 'Times New Roman', serif;
+            line-height: 1.5;
+    }
 </style>
 
 <body>
 
     <header class="main-header">
-        <div class="logo-container">
-            <img src="Web_project/Images/logo_img/logo.jpg" alt="SQU Logo" class="logo">
-            <span>SQU Student Campus</span>
-        </div>
+        <nav class="navbar navbar-expand-sm bg-black navbar-dark">
+            <div class="container-fluid d-flex flex-wrap align-items-center">
 
-        <nav>
-            <ul>
-                <li><a href="Web_project/index.html" class="active">Home</a></li>
-                <li><a href="Web_project/Restaurant.html">Restaurant</a></li>
-                <li><a href="Web_project/Announcements.html">Announcements</a></li>
-                <li><a href="Web_project/Maintenance.html">Maintenance</a></li>
-                <li><a href="Web_project/Locations.html">Locations</a></li>
-                <li><a href="Web_project/Events.html">Events</a></li>
-                <li><a href="Web_project/About us.html">About Us</a></li>
-                <li><a href="Web_project/Contact Us.html">Contact Us</a></li>
-            </ul>
+                <div class="logo-container navbar-brand d-flex align-items-center me-4">
+                    <img src="/Web_project/Images/logo_img/logo.jpg" alt="SQU Logo" class="logo" width="90px">
+                    <span class="ms-2">SQU Student Campus</span>
+                </div>
+
+
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Web_project/Restaurant.html">Restaurant</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Web_project/Announcements.html">Announcements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Web_project/Maintenance.html">Maintenance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Web_project/Locations.html">Locations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Web_project/Questionnaire.html">Questionnaire page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Web_project/calculate.html">calculate page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Web_project/funpage.html">Fun page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Web_project/About us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Web_project/Contact Us.html">Contact Us</a></li>
+                </ul>
+
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search">
+                    <button class="btn btn-outline-light" type="submit">&#128269;</button>
+                </form>
+
+            </div>
         </nav>
-
-
-        <div class="header-search">
-            <span>&#128269;</span>
-        </div>
     </header>
 
 

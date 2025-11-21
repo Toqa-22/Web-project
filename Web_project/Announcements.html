@@ -16,47 +16,16 @@
         crossorigin="anonymous">
     </script>
      <style>
-        h2.left-text-align {
-            text-align: left;
-            padding-left: 4rem;
+       body {
+            background-color: rgb(225, 225, 222);
+            font-family:Georgia, Times, 'Times New Roman', serif;
+            line-height: 1.5;
         }
-
-        #announcement-img {
-            width: 100%;
-            height: 100%;
-        }
-
-        #announcement-table {
-            text-align: left;
-            padding: 5px 30px;
-            margin: 1rem;
-        }
-
-        .announcement-table {
-            text-align: left;
-            border-collapse: collapse;
-
-        }
-
-        .announcement-table th {
-            padding: 5px;
-            margin: 5px;
-        }
-
-        .announcement-table td {
-            margin: 30px;
-            padding: 5px;
-        }
-        #report-maintenance{
-            display: inline-block;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 18px;
+        .main-footer {
+            background-image: url("Images/footer.jpg");
+            color: white;
             text-align: center;
-            min-width: 200px;
-            box-sizing: border-box;
-            color: rgb(224, 235, 235);
+            padding: 25px;
         }
         
     </style>
@@ -65,28 +34,36 @@
 <body>
 
     <header class="main-header">
-        <div class="logo-container">
-            <img src="Images/logo_img/logo.jpg" alt="SQU Logo" class="logo">
-            <span>SQU Student Campus</span>
-        </div>
-        
-            <nav >
-                <ul>
-                    <li><a href="index.html" >Home</a></li>
-                    <li><a href="Restaurant.html">Restaurant</a></li>
-                    <li><a href="Announcements.html" class="active">Announcements</a></li>
-                    <li><a href="Maintenance.html">Maintenance</a></li>
-                    <li><a href="Locations.html">Locations</a></li>
-                    <li><a href="Events.html">Events</a></li>
-                    <li><a href="About us.html">About Us</a></li>
-                    <li><a href="Contact Us.html">Contact Us</a></li>
+        <nav class="navbar navbar-expand-sm bg-black navbar-dark">
+            <div class="container-fluid d-flex flex-wrap align-items-center">
+
+                <div class="logo-container navbar-brand d-flex align-items-center me-4">
+                    <img src="Images/logo_img/logo.jpg" alt="SQU Logo" class="logo" width="90px">
+                    <span class="ms-2">SQU Student Campus</span>
+                </div>
+
+
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Restaurant.html">Restaurant</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Announcements.html">Announcements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Maintenance.html">Maintenance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Locations.html">Locations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Questionnaire.html">Questionnaire page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="calculate.html">calculate page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="funpage.html">Fun page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="About us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contact Us.html">Contact Us</a></li>
                 </ul>
-            </nav>
 
 
-        <div class="header-search">
-            <span>&#128269;</span>
-        </div>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search">
+                    <button class="btn btn-outline-light" type="submit">&#128269;</button>
+                </form>
+
+            </div>
+        </nav>
     </header>
 
 
