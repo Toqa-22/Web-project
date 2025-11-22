@@ -4,42 +4,43 @@
 <head>
     <meta name="viewport" content="width=device-width">
     <title>SQU Restaurant Survey</title>
-    
-           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-            crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
         </script>
 
-    </head>
+</head>
 
 <body>
 
-
     <header class="main-header">
-        <div class="logo-container">
-            <img src="Images/logo_img/logo.jpg" class="logo" alt="Logo">
-            <span>SQU Student Campus</span>
-        </div>
+        <nav class="navbar navbar-expand-sm bg-black navbar-dark">
+            <div class="container-fluid d-flex flex-wrap align-items-center">
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Restaurant.html" class="active">Restaurant</a></li>
-                <li><a href="Announcements.html">Announcements</a></li>
-                <li><a href="Maintenance.html">Maintenance</a></li>
-                <li><a href="Locations.html">Locations</a></li>
-                <li><a href="Events.html">Events</a></li>
-                <li><a href="About us.html">About Us</a></li>
-                <li><a href="Contact Us.html">Contact Us</a></li>
-            </ul>
+                <div class="logo-container navbar-brand d-flex align-items-center me-4">
+                    <img src="Images/logo_img/logo.jpg" alt="SQU Logo" class="logo" width="90px">
+                    <span class="ms-2">SQU Student Campus</span>
+                </div>
+
+
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Restaurant.html">Restaurant</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Announcements.html">Announcements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Maintenance.html">Maintenance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Locations.html">Locations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Questionnaire.html">Questionnaire page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="calculate.html">calculate page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="funpage.html">Fun page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="About us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contact Us.html">Contact Us</a></li>
+                </ul>
+
+            </div>
         </nav>
-
-        <div class="header-search">
-            <span>🔍</span>
-        </div>
     </header>
 
 
@@ -65,100 +66,105 @@
         </div>
 
         <section class="form-container">
-        <form action="https://httpbin.org/get" method="get">
+            <form action="https://httpbin.org/get" method="get">
 
-            <section class="form-container">
+                <section class="form-container">
 
-                <h2>Section 1: About You</h2>
+                    <h2>Section 1: About You</h2>
 
-                <div class="form-content">
-                    <p>What is your college?</p>
+                    <div class="form-content">
+                        <p>What is your college?</p>
 
-                    <label><input type="radio" name="college" value="College of Science"> College of Science</label><br>
-                    <label><input type="radio" name="college" value="College of Engineering"> College of
-                        Engineering</label><br>
-                    <label><input type="radio" name="college" value="College of Education"> College of
-                        Education</label><br>
-                    <label><input type="radio" name="college" value="College of Nursing"> College of Nursing</label><br>
-                    <label><input type="radio" name="college" value="College of Medicine & Health"> College of Medicine
-                        and Health Sciences</label><br>
-                    <label><input type="radio" name="college" value="College of Arts & Social Sciences"> College of Arts
-                        & Social Sciences</label><br>
-                    <label><input type="radio" name="college" value="College of Law"> College of Law</label><br>
-                </div>
+                        <label><input type="radio" name="college" value="College of Science"> College of
+                            Science</label><br>
+                        <label><input type="radio" name="college" value="College of Engineering"> College of
+                            Engineering</label><br>
+                        <label><input type="radio" name="college" value="College of Education"> College of
+                            Education</label><br>
+                        <label><input type="radio" name="college" value="College of Nursing"> College of
+                            Nursing</label><br>
+                        <label><input type="radio" name="college" value="College of Medicine & Health"> College of
+                            Medicine
+                            and Health Sciences</label><br>
+                        <label><input type="radio" name="college" value="College of Arts & Social Sciences"> College of
+                            Arts
+                            & Social Sciences</label><br>
+                        <label><input type="radio" name="college" value="College of Law"> College of Law</label><br>
+                    </div>
 
-                <div class="form-content">
-                    <p>What is your academic year?</p>
+                    <div class="form-content">
+                        <p>What is your academic year?</p>
 
-                    <label><input type="radio" name="year" value="Foundation"> Foundation</label><br>
-                    <label><input type="radio" name="year" value="Year 1"> Year 1</label><br>
-                    <label><input type="radio" name="year" value="Year 2"> Year 2</label><br>
-                    <label><input type="radio" name="year" value="Year 3"> Year 3</label><br>
-                    <label><input type="radio" name="year" value="Year 4"> Year 4</label><br>
-                    <label><input type="radio" name="year" value="Other"> Other</label><br>
-                </div>
+                        <label><input type="radio" name="year" value="Foundation"> Foundation</label><br>
+                        <label><input type="radio" name="year" value="Year 1"> Year 1</label><br>
+                        <label><input type="radio" name="year" value="Year 2"> Year 2</label><br>
+                        <label><input type="radio" name="year" value="Year 3"> Year 3</label><br>
+                        <label><input type="radio" name="year" value="Year 4"> Year 4</label><br>
+                        <label><input type="radio" name="year" value="Other"> Other</label><br>
+                    </div>
 
-                <h2>Section 2: Food Quality and Taste</h2>
+                    <h2>Section 2: Food Quality and Taste</h2>
 
-                <div class="form-content">
-                    <p>How often do you eat at the restaurant?</p>
+                    <div class="form-content">
+                        <p>How often do you eat at the restaurant?</p>
 
-                    <label><input type="radio" name="freq" value="Every day"> Every day</label><br>
-                    <label><input type="radio" name="freq" value="A few times a week"> A few times a week</label><br>
-                    <label><input type="radio" name="freq" value="Once a week"> Once a week</label><br>
-                    <label><input type="radio" name="freq" value="Rarely"> Rarely</label><br>
-                </div>
+                        <label><input type="radio" name="freq" value="Every day"> Every day</label><br>
+                        <label><input type="radio" name="freq" value="A few times a week"> A few times a
+                            week</label><br>
+                        <label><input type="radio" name="freq" value="Once a week"> Once a week</label><br>
+                        <label><input type="radio" name="freq" value="Rarely"> Rarely</label><br>
+                    </div>
 
-                <div class="form-content">
-                    <p>Rate the overall food quality (1–5)</p>
+                    <div class="form-content">
+                        <p>Rate the overall food quality (1–5)</p>
 
-                    <label><input type="radio" name="quality" value="1"> 1</label>
-                    <label><input type="radio" name="quality" value="2"> 2</label>
-                    <label><input type="radio" name="quality" value="3"> 3</label>
-                    <label><input type="radio" name="quality" value="4"> 4</label>
-                    <label><input type="radio" name="quality" value="5"> 5</label>
-                </div>
+                        <label><input type="radio" name="quality" value="1"> 1</label>
+                        <label><input type="radio" name="quality" value="2"> 2</label>
+                        <label><input type="radio" name="quality" value="3"> 3</label>
+                        <label><input type="radio" name="quality" value="4"> 4</label>
+                        <label><input type="radio" name="quality" value="5"> 5</label>
+                    </div>
 
-                <div class="form-content">
-                    <p>Rate the taste of the food (1–5)</p>
+                    <div class="form-content">
+                        <p>Rate the taste of the food (1–5)</p>
 
-                    <label><input type="radio" name="taste" value="1"> 1</label>
-                    <label><input type="radio" name="taste" value="2"> 2</label>
-                    <label><input type="radio" name="taste" value="3"> 3</label>
-                    <label><input type="radio" name="taste" value="4"> 4</label>
-                    <label><input type="radio" name="taste" value="5"> 5</label>
-                </div>
+                        <label><input type="radio" name="taste" value="1"> 1</label>
+                        <label><input type="radio" name="taste" value="2"> 2</label>
+                        <label><input type="radio" name="taste" value="3"> 3</label>
+                        <label><input type="radio" name="taste" value="4"> 4</label>
+                        <label><input type="radio" name="taste" value="5"> 5</label>
+                    </div>
 
-                <h2>Section 3: Preferences & Suggestions</h2>
+                    <h2>Section 3: Preferences & Suggestions</h2>
 
-                <div class="form-content">
-                    <p>What type of food would you like to see more often?</p>
+                    <div class="form-content">
+                        <p>What type of food would you like to see more often?</p>
 
-                    <label><input type="radio" name="food" value="Omani food"> Omani food</label><br>
-                    <label><input type="radio" name="food" value="Indian food"> Indian food</label><br>
-                    <label><input type="radio" name="food" value="Arabic food"> Arabic food</label><br>
-                    <label><input type="radio" name="food" value="Asian food"> Asian food</label><br>
-                    <label><input type="radio" name="food" value="Vegetarian food"> Vegetarian food</label><br>
-                    <label><input type="radio" name="food" value="Healthy food"> Healthy food</label><br>
-                </div>
+                        <label><input type="radio" name="food" value="Omani food"> Omani food</label><br>
+                        <label><input type="radio" name="food" value="Indian food"> Indian food</label><br>
+                        <label><input type="radio" name="food" value="Arabic food"> Arabic food</label><br>
+                        <label><input type="radio" name="food" value="Asian food"> Asian food</label><br>
+                        <label><input type="radio" name="food" value="Vegetarian food"> Vegetarian food</label><br>
+                        <label><input type="radio" name="food" value="Healthy food"> Healthy food</label><br>
+                    </div>
 
-                <div class="form-content">
-                    <p>What drinks or desserts do you prefer?</p>
-                    <input type="text" name="drinks" placeholder="Short answer">
-                </div>
+                    <div class="form-content">
+                        <p>What drinks or desserts do you prefer?</p>
+                        <input type="text" name="drinks" placeholder="Short answer">
+                    </div>
 
-                <div class="form-content">
-                    <p>What improvements would you suggest?</p>
-                    <textarea rows="5" name="suggestions" placeholder="Your suggestions..."></textarea>
-                </div>
+                    <div class="form-content">
+                        <p>What improvements would you suggest?</p>
+                        <textarea rows="5" name="suggestions" placeholder="Your suggestions..."></textarea>
+                    </div>
 
-                <div class="form-actions">
-                    <input class="btn-submit" type="submit" value="Submit"></input>
-                </div>
+                    <div class="form-actions">
+                        <input class="btn-submit" type="submit" value="Submit"></input>
+                    </div>
 
-            </section>
+                </section>
 
-        </form>
+            </form>
         </section>
 
 
