@@ -26,6 +26,49 @@
             text-align: center;
             padding: 25px;
         }
+        #funpage-top{
+            background-image: url("Images/Banner/funpage.jpg");
+            background-size: cover;   
+            height: 400px;                 
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+        }
+
+        .top-content-box {
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 2rem 3rem;
+            border: 3px solid white;
+        }
+
+        .top-text {
+            color: white;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        #drawing_canvas {
+            border: 2px solid #111213;
+            background-color: white;
+            /*mouse shape be + */
+            cursor: crosshair;
+        }
+        #clear_button {
+            background-color: rgb(50, 50, 70);
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 3.5px;
+            padding: 10px 20px;
+            margin:2rem;
+        }
+        .title{
+            margin: 0;
+            background:  rgb(50, 50, 70);
+            color:rgb(225, 225, 222);
+            padding: 10px 20px;
+            text-align: center;
+        }
     </style>
     
 </head>
@@ -57,6 +100,54 @@
             </div>
         </nav>
     </header>
+
+    <section class="top" id="funpage-top">
+        <div class="top-content-box">
+            <div class="top-text">
+                <h1>Relax & Draw</h1>
+                <h2>⚜ Create, relax, and enjoy your creative corner! ⚜</h2>
+            </div>
+        </div>
+    </section>
+
+    <h2 class="title">The Healing Power of Drawing and Creativity</h2>
+    <section class="container my-5">
+        <div class="row g-3">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <img class="img-fluid rounded" src="Images/Fun_page/funPage1.jpg" alt="funpage image 1" />
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <img class="img-fluid rounded" src="Images/Fun_page/funPage2.jpg" alt="funpage image 2" />
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <img class="img-fluid rounded" src="Images/Fun_page/funPage3.jpg" alt="funpage image 3" />
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <img class="img-fluid rounded" src="Images/Fun_page/funPage4.jpg" alt="funpage image 4" />
+            </div>
+        </div>
+    </section>
+
+
+
+    <h2 class="title">Your Personal Corner for Creative Expression</h2>
+    <section class="container text-center">
+        <div>
+            <canvas id="drawing_canvas" width="700" height="500" class="m-3"></canvas>
+        </div>
+        <!-- choose color  + size-->
+        <div class="mb-3">
+            <label class="me-2"><pre>Choose Color:</pre></label>
+            <input type="color" id="color">
+            <label><pre>    Brush Size:</pre></label>
+            <input type="range" id="sizePicker" class="form-range w-auto d-inline-block ms-2" min="1" max="10" value="3">
+        </div>
+        <!--clear button-->
+        <div>
+            <button onclick="clear_canvas()" id="clear_button">Clear</button>
+        </div>
+        <p>Use the mouse to draw!</p>
+    </section>
 
 
     <footer class="main-footer">
