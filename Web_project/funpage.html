@@ -22,52 +22,26 @@
         }
         .main-footer {
             background-image: url("Images/footer.jpg");
-            color: white;
-            text-align: center;
-            padding: 25px;
         }
         #funpage-top{
             background-image: url("Images/Banner/funpage.jpg");
             background-size: cover;   
             height: 400px;                 
             display: flex; 
-            justify-content: center;
-            align-items: center;
-        }
-
-        .top-content-box {
-            background-color: rgba(0, 0, 0, 0.4);
-            padding: 2rem 3rem;
-            border: 3px solid white;
-        }
-
-        .top-text {
-            color: white;
-            font-weight: 700;
-            margin: 0;
         }
 
         #drawing_canvas {
-            border: 2px solid #111213;
-            background-color: white;
             /*mouse shape be + */
             cursor: crosshair;
         }
         #clear_button {
             background-color: rgb(50, 50, 70);
-            color: white;
             font-size: 15px;
             font-weight: bold;
-            border-radius: 3.5px;
-            padding: 10px 20px;
-            margin:2rem;
         }
         .title{
-            margin: 0;
-            background:  rgb(50, 50, 70);
-            color:rgb(225, 225, 222);
-            padding: 10px 20px;
-            text-align: center;
+            background-color: rgb(50, 50, 70);
+            color: rgb(225, 225, 222);
         }
         .navbar-nav {
             flex-wrap: wrap;
@@ -105,16 +79,16 @@
         </nav>
     </header>
 
-    <section class="top" id="funpage-top">
-        <div class="top-content-box">
-            <div class="top-text">
+    <section class="top align-items-center" id="funpage-top">
+        <div class="container top-content-box p-4 bg-black bg-opacity-50 border border-white border-3">
+            <div class="top-text text-light text-center">
                 <h1>Relax & Draw</h1>
-                <h2>⚜ Create, relax, and enjoy your creative corner! ⚜</h2>
+                <h2>⚜ enjoy and let your creative imagination flow ⚜</h2>
             </div>
         </div>
     </section>
 
-    <h2 class="title">The Healing Power of Drawing and Creativity</h2>
+    <h2 class="title p-3 text-center">The Healing Power of Drawing and Creativity</h2>
     <section class="container mb-5 mt-5">
         <div class="row g-3">
             <div class="col-12 col-sm-6 col-lg-4">
@@ -140,10 +114,10 @@
 
 
 
-    <h2 class="title">Your Personal Corner for Creative Expression</h2>
+    <h2 class="title p-3 text-center">Your Personal Corner for Creative Expression</h2>
     <section class="container text-center mb-5 mt-5">
         <div>
-            <canvas id="drawing_canvas" width="700" height="500" class="m-3"></canvas>
+            <canvas id="drawing_canvas" width="700" height="500" class="m-3 bg-light"></canvas>
         </div>
         <!-- choose color  + size-->
         <div class="mb-3">
@@ -154,13 +128,13 @@
         </div>
         <!--clear button-->
         <div>
-            <button onclick="clear_canvas()" id="clear_button">Clear</button>
+            <button onclick="clear_canvas()" id="clear_button" class="p-2 m-3 rounded text-light">Clear</button>
         </div>
         <p>Use the mouse to draw!</p>
     </section>
 
 
-    <footer class="main-footer">
+    <footer class="main-footer text-light text-center p-3">
         <p> © 2025 Student Complex </p>
     </footer>
 

@@ -19,22 +19,8 @@
         #Monday-top{
             background-image: url("../Images/Banner/WeekDays/Monday.jpg");
             background-size: cover;   
-            height: 400px;                 
-            display: flex; 
-            justify-content: center;
-            align-items: center;
-        }
-
-        .top-content-box {
-            background-color: rgba(0, 0, 0, 0.4);
-            padding: 2rem 3rem;
-            border: 3px solid white;
-        }
-
-        .top-text h1 {
-            color: white;
-            font-weight: 700;
-            margin: 0;
+            height: 400px;
+            display: flex;
         }
 
         body {
@@ -44,21 +30,11 @@
         }
         .button-Restaurant .service-button {
             background-color: rgb(50, 50, 70);
-            color: white;
             text-decoration: none;
             display: inline-block;
-            font-size: 15px;
-            font-weight: bold;
-            border-radius: 3.5px;
-            padding: 10px 20px;
-            margin:2rem;
         }
-
         .main-footer {
             background-image: url("../Images/footer.jpg");
-            color: white;
-            text-align: center;
-            padding: 25px;
         }
         .navbar-nav {
             flex-wrap: wrap;
@@ -96,9 +72,9 @@
     </header>
 
 
-    <section class="top" id="Monday-top">
-        <div class="top-content-box">
-            <div class="top-text">
+    <section class="top align-items-center" id="Monday-top">
+        <div class="container top-content-box p-4 bg-black bg-opacity-50 border border-white border-3">
+            <div class="top-text text-light text-center ">
                 <h1>Monday</h1>
             </div>
         </div>
@@ -148,10 +124,10 @@
 
     <section>
         <div class="button-Restaurant">
-            <a href="../Restaurant.html" class="service-button">Restaurant page</a>
+            <a href="../Restaurant.html" class="service-button p-2 m-3 rounded text-light">Restaurant page</a>
         </div>
     </section>
-    <footer class="main-footer">
+    <footer class="main-footer text-light text-center p-3">
         <p> © 2025 Student Complex </p>
     </footer>
     <script type="text/javascript" src="../Script.js">
