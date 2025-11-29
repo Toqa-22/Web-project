@@ -200,19 +200,43 @@
         </div>
     </div>
 
-    <section class="section1">
-        <h2 class="left-text-align">Student Service</h2>
-    </section>
-    <div class="section2">
-        <a href="Web_project/Maintenance.html" class="service-button">Maintenance Request</a>
-        <a href="Web_project/Restaurant.html" class="service-button">Restaurant Feedback</a>
+        <div class="container-fluid d-flex  section1">
+        <div class="row ">
+            <div class="col-12 text-left p-4 ms-5 ">
+                <h2 class="h2 fw-bold">Student Service</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid d-flex align-items-center justify-content-center section2">
+        <div class="row ">
+            <div class="col-6  p-5">
+                <a href="Web_project/maintenance.html">
+                    <button type="button" class="btn rounded-0 btn-outline-secondary">Maintenance
+                        Request</button>
+                </a>
+            </div>
+            <div class="col-6 p-5">
+                <a href="Web_project/survey.html">
+                    <button type="button" class="btn rounded-0 mx-5 btn-outline-secondary">Restaurant
+                        Feedback</button>
+                </a>
+            </div>
+        </div>
     </div>
 
 
 
-    <footer class="main-footer">
+    <div id="main-footer" class="container-fluid d-flex text-white align-items-center justify-content-center">
         <p>&copy; 2025 Student Complex</p>
-    </footer>
+    </div>
+
+    <!-- Bottom text Banner -->
+    <div class="bg-dark text-white ">
+        <marquee id="welcomeMarquee" behavior="scroll" direction="left" scrollamount="6" >
+            <!-- Content filled by JS -->
+        </marquee>
+    </div>
+
 
 </body>
 
