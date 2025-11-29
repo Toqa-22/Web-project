@@ -89,94 +89,142 @@
             </div>
         </div>
     </section>
-    <section class="section-form">
-        <section class="form-header">
-            <h1>Campus Housing Room Maintenance Request – Female Students</h1>
-            <p>Please use this form to report any maintenance issues in your room. Accurate and detailed
-                information will help our staff resolve issues quickly. </p>
-        </section>
+   <div class="container mb-5 py-5 section2 justify-content-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow-lg ">
+                    <div class="card-body">
 
-        <section class="form-header-note">
-            <p class="required-note">* Indicates required question</p>
-        </section>
+                        <h1>Campus Housing Room Maintenance Request – Female Students</h1>
 
-        <section class="form-container">
-            <form action="https://httpbin.org/get" method="get">
-                <h2>Informations </h2>
-                <div class="form-content">
-                    <label for="full-name">Full Name <span class="required">*</span></label>
-                    <input type="text" id="full-name" name="full-name" placeholder="Your answer">
+                        <p class="text-muted">Please use this form to report any maintenance issues in your room.
+                            Accurate and detailed information will help our staff resolve issues quickly.</p>
+                        <hr>
+                        <p class="text-danger ">* Indicates required question</p>
+                        <hr>
+
+                        <form action="mailto: campus.website@outlook.com" method="post" was-validated>
+                            <h6 class="fw-semibold mb-3">Informations</h6>
+
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Full Name <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Your answer"
+                                    required>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="studentId" class="form-label">Student ID <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="studentId" placeholder="Your answer"
+                                        required>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="roomNumber" class="form-label">Room Number <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="roomNumber" placeholder="Your answer"
+                                        required>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                            </div>
+
+                            <hr />
+
+
+                            <h6 class="fw-semibold mb-3">About the issue</h6>
+
+                            <div class="mb-3">
+                                <label class="form-label d-block">Type of Issue <span
+                                        class="text-danger">*</span></label>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="issueType"
+                                        id="issueElectrical" value="Electrical" required>
+                                    <label class="form-check-label" for="issueElectrical">Electrical (lights, sockets,
+                                        etc.)</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="issueType" id="issuePlumbing"
+                                        value="Plumbing">
+                                    <label class="form-check-label" for="issuePlumbing">Plumbing (toilet, shower, sink,
+                                        etc.)</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="issueType" id="issueFurniture"
+                                        value="Furniture">
+                                    <label class="form-check-label" for="issueFurniture">Furniture (bed, desk, chair,
+                                        wardrobe, etc.)</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="issueType" id="issueInternet"
+                                        value="Internet">
+                                    <label class="form-check-label" for="issueInternet">Internet / Wi-Fi</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="issueType" id="issueOther"
+                                        value="Other">
+                                    <label class="form-check-label" for="issueOther">Other:</label>
+                                    <textarea class="form-control" id="description" rows="4"
+                                        placeholder="Describe the issue in detail"></textarea>
+                                </div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div>
+
+
+
+                            <div class="mx-4">
+                                <label class="form-label d-block">Urgency Level <span
+                                        class="text-danger">*</span></label>
+
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="text-danger ">High (needs immediate attention) </div>
+                                    <div class="flex-wrap">
+                                        <div class="btn-group">
+                                            <input type="radio" class="btn-check" name="urgency" id="urg1" value="1"
+                                                autocomplete="off" required>
+                                            <label class="btn btn-outline-secondary" for="urg1">1</label>
+
+                                            <input type="radio" class="btn-check" name="urgency" id="urg2" value="2">
+                                            <label class="btn btn-outline-secondary" for="urg2">2</label>
+
+                                            <input type="radio" class="btn-check" name="urgency" id="urg3" value="3"
+                                                autocomplete="off">
+                                            <label class="btn btn-outline-secondary" for="urg3">3</label>
+
+                                            <input type="radio" class="btn-check" name="urgency" id="urg4" value="4"
+                                                autocomplete="off">
+                                            <label class="btn btn-outline-secondary" for="urg4">4</label>
+
+                                            <input type="radio" class="btn-check" name="urgency" id="urg5" value="5"
+                                                autocomplete="off">
+                                            <label class="btn btn-outline-secondary" for="urg5">5</label>
+                                        </div>
+                                    </div>
+                                    <div class="text-muted m-4">Low (can wait several days)</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                            </div>
+                            <button type="reset" class="btn btn-outline-secondary">Clear form</button>
+                            <button type="submit" class="btn btn-secondary ">Submit</button>
+                        </form>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
 
-                <div class="form-content">
-                    <label for="student-id">Student ID <span class="required">*</span></label>
-                    <input type="text" id="student-id" name="student-id" placeholder="Your answer">
-                </div>
-
-                <div class="form-content">
-                    <label for="room-number">Room Number <span class="required">*</span></label>
-                    <input type="text" id="room-number" name="room-number" placeholder="Your answer">
-                </div>
-
-                <h2>About the issue </h2>
-                <div class="form-content">
-                    <label for="issue-type1">Type of Issue <span class="required">*</span></label><br>
-                    <input type="checkbox" name="issue-type" value="electrical">
-                    <label for="issue-type2">Electrical (lights, sockets, etc.) </label><br>
-                    <input type="checkbox" name="issue-type" value="plumbing">
-                    <label for="issue-type3">Plumbing (toilet, shower, sink, etc.) </label><br>
-                    <input type="checkbox" name="issue-type" value="furniture">
-                    <label for="issue-type4">Furniture (bed, desk, chair, wardrobe,etc.) </label><br>
-                    <input type="checkbox" name="issue-type" value="internet">
-                    <label for="issue-type5">Internet / Wi-Fi </label><br>
-                    <input type="checkbox" name="issue-type" value="other">
-                    <label for="other-issue-type">Other: </label><br>
-                    <textarea name="other-issue-type" rows="2"></textarea>
-                </div>
-
-                <div class="form-content">
-                    <label for="issue-description">Description of Issue/s <span class="required">*</span></label>
-                    <textarea name="other-issue-type" rows="2"></textarea>
-                </div>
-
-                <div class="form-content">
-                    <label for="urgency">Urgency Level <span class="required">*</span></label><br>
-
-
-                    <label for="high">High (needs immediate attention)</label><br>
-
-                    <input type="radio" name="urgency" value="1">
-                    <label for="level1">1</label><br>
-
-                    <input type="radio" name="urgency" value="2">
-                    <label for="level2">2</label><br>
-
-                    <input type="radio" name="urgency" value="3">
-                    <label for="level3">3</label><br>
-
-                    <input type="radio" name="urgency" value="4">
-                    <label for="level4">4</label><br>
-
-                    <input type="radio" name="urgency" value="5">
-                    <label for="level4">5</label><br>
-
-                    <label for="low"> Low (can wait several days)</label>
-                </div>
-
-                <section class="form-actions">
-                    <button type="reset" class="btn-link">Clear form</button>
-                    <button type="submit" class="btn-submit">Submit</button>
-                </section>
-            </form>
-        </section>
-        
-    </section>
-
-    <footer class="main-footer">
+    <div id="main-footer" class="container-fluid d-flex text-white align-items-center justify-content-center">
         <p>&copy; 2025 Student Complex</p>
-    </footer>
+    </div>
+
+
 </body>
 
 </html>
-
-
