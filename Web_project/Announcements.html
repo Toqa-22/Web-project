@@ -1,35 +1,56 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SQU Student Campus Housing - Announcements</title>
-    <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
-        rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-        crossorigin="anonymous">
-    <script 
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous">
-    </script>
-     <style>
-       body {
-            background-color: rgb(225, 225, 222);
-            font-family:Georgia, Times, 'Times New Roman', serif;
-            line-height: 1.5;
-        }
-        .main-footer {
-            background-image: url("Images/footer.jpg");
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
-        
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
 </head>
+<style>
+    #main-footer {
+        background-image: url("Images/footer.jpg");
+
+    }
+
+    body {
+        background-color: rgb(225, 225, 222);
+        font-family: Georgia, Times, 'Times New Roman', serif;
+    }
+
+    #top {
+        background-image: url("Images/Banner/Announcements.jpg");
+        background-position: center;
+        min-height: calc(80vh - 72px);
+        position: sticky;
+        background-size: cover;
+
+    }
+
+
+
+    .section1 {
+        background-color: rgb(50, 50, 70);
+        color: rgb(225, 225, 222);
+    }
+
+    .section2 {
+        background-color: rgb(225, 225, 222);
+        color: rgb(50, 50, 70);
+    }
+
+    
+    .btn {
+        background-color: rgb(50, 50, 70);
+        color: rgb(225, 225, 222);
+        min-width: 200px;
+    }
+</style>
 
 <body>
 
@@ -61,18 +82,16 @@
         </nav>
     </header>
 
+    <section id="top" class="container-fluid d-flex align-items-center justify-content-center">
+        <div class="row ">
+            <div class="col-12 text-center ">
+                <div class=" border border-5 border-white px-5 py-4 bg-black bg-opacity-50  m-0">
+                    <h1 class="display-5 fw-bold text-white">Announcements</h1>
 
-    <section class="top" id="announcement-top">
-        
-        <div class="top-content-box">
-            <div class="top-text">
-                <h1>Announcements</h1>
+                </div>
 
             </div>
         </div>
-    </section>
-    <section class="section1">
-        <h2 class="left-text-align">Campus Housing Announcements</h2>
     </section>
     <section class="section2">
         <table id="announcement-table">
@@ -109,6 +128,7 @@
 
 </body>
 </html>
+
 
 
 
