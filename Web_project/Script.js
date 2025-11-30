@@ -121,10 +121,10 @@ function calculateBill() {
   var basicCost = basicCount * BASIC_PRICE;
   // Total cost for special items
   var specialCost = specialCount * SPECIAL_PRICE;
-  // The initial total cost (before any fees or discounts)
+  // The initial total cost 
   let totalInitialCost = basicCost + specialCost;
 
-  // Variable to store the discount/fee message
+  // Variable to store the final cost/fee message
   let message = "";
   let finalCost = totalInitialCost;
 
