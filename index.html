@@ -12,7 +12,7 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
         </script>
 
-    <script type="text/javaScript" src="Web_project/Script.js"></script>
+    
 </head>
 <style>
     #main-footer {
@@ -232,7 +232,9 @@
     <section class="fixed-bottom bg-dark text-white py-2">
         <div class="container-fluid">
             <marquee direction="left" behavior="scroll" scrollamount="6">
-                <h6 id="banner-content" class="lead fs-6">Welcome to the  <span id="companyName"></span>  website! Today is <span id="currentDate"></span>, and the time is <span id ="currentTime"></span></h6>
+                <h6 id="banner-content" class="lead fs-6">
+                    Welcome to the  <span id="companyName"></span>  website! Today is <span id="currentDate"></span>, and the time is <span id="currentTime"></span>
+                </h6>
             </marquee>
         </div>
     </section>
@@ -243,7 +245,32 @@
     </div>
 
     
+    <script>
+        // 1. Set  Company Name
+        const companyName = "SQU Student Campus Housing"; 
+        document.getElementById("companyName").textContent = companyName;
+        // 2. Function to update the text
+        function updateDateTime() {
+            const now = new Date();
 
+            // Format date and time based on user's locale
+            // Format date as DD/MM/YYYY
+            const currentDate = now.toLocaleDateString('en-GB');
+            // Format time as HH:MM:SS AM/PM
+            const currentTime = now.toLocaleTimeString('en-US');
+
+            
+            // Update the HTML
+            document.getElementById("currentDate").textContent = currentDate;
+            document.getElementById("currentTime").textContent = currentTime;
+        }
+
+        // 3. Update immediately on load
+        updateDateTime();
+
+        // 4. Update every second (1000ms) so the time stays accurate
+        setInterval(updateDateTime, 1000);
+    </script>
 
 </body>
 

@@ -70,35 +70,6 @@ document.getElementById("sizePicker").onchange = function() {
 function clear_canvas() {
     context.clearRect(0, 0, canvas.width, canvas.height);
 }
-/* =================================
-        for index banner text
-   =================================
-*/
-
-// 1. Set  Company Name
-const _companyName = "SQU Student Campus Housing";
-
-// 2. Function to update the text
-function updateBanner() {
-  var _now = new Date();
-
-  // Format date and time based on user's locale
-  var _currentDate = _now.toLocaleDateString('en-GB');
-  var _currentTime =  _now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-
-  // Inject into the HTML
-  
-  document.getElementById('companyName').innerHTML = _companyName;
-  document.getElementById('currentDate').innerHTML = _currentDate;
-  document.getElementById('currentTime').innerHTML = _currentTime;
-
-}
-
-// 3. Update immediately on load
-updateBanner();
-
-// 4. Update every second (1000ms) so the time stays accurate
-setInterval(updateBanner, 1000);
 
 /* =================================
         for calculate page
