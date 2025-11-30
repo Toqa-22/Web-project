@@ -19,9 +19,8 @@
     <script type="text/javaScript" src="Web_project/Script.js"></script>
 </head>
 <style>
-    #main-footer {
+    .main-footer {
         background-image: url("Web_project/Images/footer.jpg");
-
     }
 
     body {
@@ -38,7 +37,9 @@
         background-size: cover;
 
     }
-
+    .navbar-nav {
+        flex-wrap: wrap;
+    }
 
 
     .section1 {
@@ -73,13 +74,11 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="Web_project/Restaurant.html">Restaurant</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Web_project/Announcements.html">Announcements</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Web_project/Announcements.html">Announcements</a></li>
                     <li class="nav-item"><a class="nav-link" href="Web_project/Maintenance.html">Maintenance</a></li>
                     <li class="nav-item"><a class="nav-link" href="Web_project/Locations.html">Locations</a></li>
                     <li class="nav-item"><a class="nav-link" href="Web_project/Events.html">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Web_project/Questionnaire.html">Questionnaire
-                            page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Web_project/Questionnaire.html">Questionnaire page</a></li>
                     <li class="nav-item"><a class="nav-link" href="Web_project/calculate.html">calculate page</a></li>
                     <li class="nav-item"><a class="nav-link" href="Web_project/funpage.html">Fun page</a></li>
                     <li class="nav-item"><a class="nav-link" href="Web_project/About us.html">About Us</a></li>
@@ -227,9 +226,9 @@
 
 
 
-    <div id="main-footer" class="container-fluid d-flex text-white align-items-center justify-content-center">
-        <p>&copy; 2025 Student Complex</p>
-    </div>
+    <footer class="main-footer text-light text-center p-3">
+        <p> © 2025 Student Complex </p>
+    </footer>
 
     <!-- Bottom text Banner -->
     <div class="bg-dark text-white ">
