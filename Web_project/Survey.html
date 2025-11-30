@@ -280,69 +280,74 @@
             </div>
 
         </section>
-        <section>
-            <script>
-            
-            function validateRadio(name) {
-                let options = document.getElementsByName(name);
-                for (let i = 0; i < options.length; i++) {
-                    if (options[i].checked) {
-                        return true;
-                    }
-                }
-                return false;
+        
+
+        <script>
+    // This function checks if at least one radio button (by name) is selected
+    function validateRadio(name) {
+        let options = document.getElementsByName(name); // get all radio inputs with the given name
+        
+        // loop through the options
+        for (let i = 0; i < options.length; i++) {
+            // if any radio button is checked, return true
+            if (options[i].checked) {
+                return true;
             }
-            
-            function validateSurvey(event) {
+        }
+        return false; // none were checked
+    }
 
-                
-            
-                event.preventDefault();
-                
-                let valid = true;
-            
-                if (!validateRadio("college")) {
-                    alert("Please select your college.");
-                    
-                    valid = false;
-                }
-            
-                if (!validateRadio("year")) {
-                    alert("Please select your academic year.");
-                    valid = false;
+    // Main function that runs when the form is submitted
+    function validateSurvey(event) {
+        // stop the form from submitting immediately
+        event.preventDefault(); 
+        // assume all inputs are correct at first
+        let valid = true; 
 
-                    
-                }
-            
-                if (!validateRadio("freq")) {
-                    alert("Please select how often you eat at the restaurant.");
-                    valid = false;
-                }
-            
-                if (!validateRadio("quality")) {
-                    alert("Please rate the food quality.");
-                    valid = false;
-                }
-            
-                if (!validateRadio("taste")) {
-                    alert("Please rate the taste.");
-                    valid = false;
+        // Check each radio group and show alert if not selected
+        if (!validateRadio("college")) {
+            alert("Please select your college.");
+            valid = false;
+        }
 
-                    
-                }
-            
-                if (valid) {
-                    alert("Survey submitted successfully. Thank you!");
-                    event.target.submit();
-                    
-                }
-            }
-            
-            let surveyForm = document.querySelector("form");
-            surveyForm.addEventListener("submit", validateSurvey);
-            
-            </script>
-        </section>
+        if (!validateRadio("year")) {
+            alert("Please select your academic year.");
+            valid = false;
+        }
+
+        if (!validateRadio("freq")) {
+            alert("Please select how often you eat at the restaurant.");
+            valid = false;
+        }
+
+        if (!validateRadio("quality")) {
+            alert("Please rate the food quality.");
+            valid = false;
+        }
+
+        if (!validateRadio("taste")) {
+            alert("Please rate the taste.");
+            valid = false;
+        }
+
+        // If everything is valid, allow the form to submit
+        if (valid) {
+            alert("Survey submitted successfully. Thank you!");
+            // manually submit the form after validation passes
+            event.target.submit(); 
+        }
+    }
+
+
+    
+    // Get the first form on the page
+    let surveyForm = document.querySelector("form");
+
+    // When the form is submitted, run the validateSurvey function
+    surveyForm.addEventListener("submit", validateSurvey);
+
+</script>
+
 
 
 

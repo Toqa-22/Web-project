@@ -188,63 +188,68 @@
 
                 function validateForm() {
 
+                    // Get user input values and remove extra spaces
                     let name = document.getElementById("name").value.trim();
-
                     let email = document.getElementById("email").value.trim();
                     let message = document.getElementById("message").value.trim();
 
-
-
+                    // Get the error message elements
                     let nameErr = document.getElementById("nameError");
-
                     let emailErr = document.getElementById("emailError");
-
                     let msgErr = document.getElementById("messageError");
 
+
+                    // Hide all error messages at the start
                     nameErr.classList.add("d-none");
                     emailErr.classList.add("d-none");
-
                     msgErr.classList.add("d-none");
 
+                    // Assume form is valid first
                     let valid = true;
 
+
+
+
+
+
+                    // Validate name (must be at least 3 characters)
                     if (name.length < 3) {
-                        nameErr.classList.remove("d-none");
+                        nameErr.classList.remove("d-none"); // show error
                         valid = false;
-
-
                     }
 
+
+
+
+                    // Regular expression to check valid email format
                     let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+
+
+                    // Validate email (must match pattern)
                     if (!emailPattern.test(email)) {
-                        emailErr.classList.remove("d-none");
-
+                        emailErr.classList.remove("d-none"); // show error
                         valid = false;
-
-
                     }
 
 
 
+                    // Validate message (must be at least 10 characters)
                     if (message.length < 10) {
-                        msgErr.classList.remove("d-none");
+                        msgErr.classList.remove("d-none"); // show error
                         valid = false;
-
-
                     }
 
 
-
+                    
+                    // If everything is valid
                     if (valid) {
                         alert("Feedback sent successfully. Thank you!");
-                        document.getElementById("contactForm").reset();
-
-
+                        document.getElementById("contactForm").reset(); // clear form
                     }
-
-
-
                 }
+
 
             </script>
 

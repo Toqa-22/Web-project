@@ -263,17 +263,26 @@
 
         <section>
             <script>
+                // For each question:
+                // Get the selected radio button using querySelector
+                // "if something is selected, get its value"
+                // Compare with the correct answer → if correct then increase score
+
 
                 function checkQuiz() {
-
+                    // Start the score at 0
                     let score = 0;
-
+                    // Question 1 — correct answer is "b"
                     if (document.querySelector('input[name="q1"]:checked')?.value === "b") score++;
+                    // Question 2 — correct answer is "a"
                     if (document.querySelector('input[name="q2"]:checked')?.value === "a") score++;
+                    // Question 3 — correct answer is "b"
                     if (document.querySelector('input[name="q3"]:checked')?.value === "b") score++;
+                    // Question 4 — correct answer is "a"
                     if (document.querySelector('input[name="q4"]:checked')?.value === "a") score++;
+                    // Question 5 — correct answer is "b"
                     if (document.querySelector('input[name="q5"]:checked')?.value === "b") score++;
-
+                     // Show the final score to the user
                     alert("Your score is: " + score + "/5");
                 }
 
