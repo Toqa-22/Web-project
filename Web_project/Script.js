@@ -70,6 +70,90 @@ document.getElementById("sizePicker").onchange = function() {
 function clear_canvas() {
     context.clearRect(0, 0, canvas.width, canvas.height);
 }
+/* =================================
+        for index banner text
+   =================================
+*/
+
+// 1. Set  Company Name
+const _companyName = "SQU Student Campus Housing";
+
+// 2. Function to update the text
+function updateBanner() {
+  var _now = new Date();
+
+  // Format date and time based on user's locale
+  var _currentDate = _now.toLocaleDateString('en-GB');
+  var _currentTime =  _now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+  // Inject into the HTML
+  
+  document.getElementById('companyName').innerHTML = _companyName;
+  document.getElementById('currentDate').innerHTML = _currentDate;
+  document.getElementById('currentTime').innerHTML = _currentTime;
+
+}
+
+// 3. Update immediately on load
+updateBanner();
+
+// 4. Update every second (1000ms) so the time stays accurate
+setInterval(updateBanner, 1000);
+
+/* =================================
+        for calculate page
+   =================================
+*/
+
+function calculateBill() {
+  // 1. Retrieve values from the form fields
+  var basicCount = parseInt(document.getElementById('basicItems').value); // Number of shirts/pants
+  var specialCount = parseInt(document.getElementById('specialItems').value); // Number of dresses/abayas
+  var wantDelivary = document.getElementById('wantDelivary').checked; // Is the user want a Delivary
+
+  // Define the service prices (in Omani Riyal - OMR)
+  var BASIC_PRICE = 0.500; // 500 Baisa
+  var SPECIAL_PRICE = 1.000; // 1.000 OMR
+  var DELIVERY_FEE = 1.000; // Delivery fee for non-residents
+
+  
+  // Total cost for basic items
+  var basicCost = basicCount * BASIC_PRICE;
+  // Total cost for special items
+  var specialCost = specialCount * SPECIAL_PRICE;
+  // The initial total cost (before any fees or discounts)
+  let totalInitialCost = basicCost + specialCost;
+
+  // Variable to store the discount/fee message
+  let message = "";
+  let finalCost = totalInitialCost;
+
+  
+
+  // Condition : Is the user want a delivary? 
+  if (wantDelivary) {
+    // User is not a resident, apply the delivery fee
+    finalCost = finalCost + DELIVERY_FEE; 
+    message += "Delivery fee of 1.000 OMR has been added. ";
+  } else {
+    // User is a resident, delivery is free
+    message += "Delivery service is not added. ";
+  }
+
+  
+
+  // 2. Display the final result
+
+  // Use toFixed(3) to ensure the currency is displayed with three decimal places (Rials and Baisa)
+  document.getElementById('totalCost').innerHTML = "<strong>Total Final Bill: </strong>" +finalCost.toFixed(3) + "OMR";
+  document.getElementById('Message').innerText = message;
+
+
+  // Show the results area after calculation
+  document.getElementById('resultArea').style.display = 'block';
+}
+
+
 
 
 
