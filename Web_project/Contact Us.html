@@ -186,80 +186,14 @@
 
 
 
-        <section>
-            <script>
-
-                function validateForm() {
-
-                    let name = document.getElementById("name").value.trim();
-
-                    let email = document.getElementById("email").value.trim();
-                    let message = document.getElementById("message").value.trim();
-
-
-
-                    let nameErr = document.getElementById("nameError");
-
-                    let emailErr = document.getElementById("emailError");
-
-                    let msgErr = document.getElementById("messageError");
-
-                    nameErr.classList.add("d-none");
-                    emailErr.classList.add("d-none");
-
-                    msgErr.classList.add("d-none");
-
-                    let valid = true;
-
-                    if (name.length < 3) {
-                        nameErr.classList.remove("d-none");
-                        valid = false;
-
-
-                    }
-
-                    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailPattern.test(email)) {
-                        emailErr.classList.remove("d-none");
-
-                        valid = false;
-
-
-                    }
-
-
-
-                    if (message.length < 10) {
-                        msgErr.classList.remove("d-none");
-                        valid = false;
-
-
-                    }
-
-
-
-                    if (valid) {
-                        alert("Feedback sent successfully. Thank you!");
-                        document.getElementById("contactForm").reset();
-
-
-                    }
-
-
-
-                }
-
-            </script>
-
-
-
-        </section>
+      
 
     </body>
 
 
     
 </html>
+
 
 
 
