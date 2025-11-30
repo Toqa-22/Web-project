@@ -57,10 +57,14 @@ function draw(e) {
 }
 
 // Update drowing color
-document.getElementById("color").addEventListener("change", e => color = e.target.value);
+document.getElementById("color").onchange = function() {
+    color = this.value;
+};
 
 // Update drowing size
-document.getElementById("sizePicker").addEventListener("input", e => size = e.target.value);
+document.getElementById("sizePicker").onchange = function() {
+    size = this.value;
+};
 
 // Clear the drowing box
 function clear_canvas() {
