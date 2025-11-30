@@ -1,247 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>SQU Student Campus Housing - Restaurant</title>
+<html>
+    <body>
 
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-    </script>
-    <style>
-        body {
-            background-color: rgb(225, 225, 222);
-            font-family:Georgia, Times, 'Times New Roman', serif;
-            line-height: 1.5;
-        }
-        .main-footer {
-            background-image: url("Images/footer.jpg");
-        }
-        .navbar-nav {
-            flex-wrap: wrap;
-        }
-    </style>
+        <section>
 
-</head>
+            <header class="main-header">
+                <nav class="navbar navbar-expand-sm navbar-dark bg-black">
 
-<body>
+                    <div class="container-fluid">
 
-    <header class="main-header">
-        <nav class="navbar navbar-expand-sm bg-black navbar-dark">
-            <div class="container-fluid d-flex flex-wrap align-items-center">
+                        <a class="navbar-brand d-flex align-items-center" href="#">
+                            <img src="Images/logo_img/logo.jpg" width="80" class="rounded me-2">
+                            <span>SQU Student Campus</span>
 
-                <div class="logo-container navbar-brand d-flex align-items-center me-4">
-                    <img src="Images/logo_img/logo.jpg" alt="SQU Logo" class="logo" width="90px">
-                    <span class="ms-2">SQU Student Campus</span>
+
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks">
+
+
+                            <span class="navbar-toggler-icon"></span>
+
+
+
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navLinks">
+
+
+                            <ul class="navbar-nav ms-auto flex-wrap">
+
+
+
+                                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="Restaurant.html">Restaurant</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Announcements.html">Announcements</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Maintenance.html">Maintenance</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Locations.html">Locations</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Events.html">Events</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Questionnaire.html">Questionnaire page</a></li>
+                                <li class="nav-item"><a class="nav-link" href="calculate.html">calculate page</a></li>
+                                <li class="nav-item"><a class="nav-link" href="funpage.html">Fun page</a></li>
+                                <li class="nav-item"><a class="nav-link" href="About us.html">About Us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Contact Us.html">Contact Us</a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+                </nav>
+
+
+            </header>
+
+
+        </section>
+
+    
+        <section id="restaurant-banner" class="d-flex justify-content-center align-items-center text-white">
+            <div class="text-center bg-black bg-opacity-50 p-4 border border-3 border-white">
+                <h1 class="display-5 fw-bold">RESTAURANT</h1>
+
+
+            </div>
+        </section>
+
+
+        <section class="py-4 bg-dark text-light text-center">
+            <h2 class="fw-bold">Weekly Menu</h2>
+
+            <div class="mt-4">
+                <button class="btn btn-outline-light m-2" onclick="showBreakfast()">Show Breakfast</button>
+                <button class="btn btn-outline-light m-2" onclick="showLunch()">Show Lunch</button>
+                <button class="btn btn-outline-light m-2" onclick="showDinner()">Show Dinner</button>
+                <button class="btn btn-warning m-2 fw-bold" onclick="showAll()">Show All Meals</button>
+
+
+            </div>
+
+
+        </section>
+
+
+        <section class="container py-5">
+
+    
+            <div id="breakfastTable">
+                <h3 class="mb-3 fw-bold">Breakfast</h3>
+                <div class="table-responsive mb-5">
+                    <table class="table table-bordered table-striped text-center">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Day</th>
+                                <th>Main Item</th>
+                                <th>Drink</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Sunday</td><td>Foul</td><td>Tea</td></tr>
+                            <tr><td>Monday</td><td>Omelette</td><td>Milk</td></tr>
+                            <tr><td>Tuesday</td><td>Chapati & Cheese</td><td>Karak</td></tr>
+                            <tr><td>Wednesday</td><td>Egg Sandwich</td><td>Tea</td></tr>
+                            <tr><td>Thursday</td><td>Pancakes</td><td>Hot Chocolate</td></tr>
+
+
+                        </tbody>
+
+
+                    </table>
+
+
+                </div>
+            </div>
+
+    
+            <div id="lunchTable">
+                <h3 class="mb-3 fw-bold">Lunch</h3>
+                <div class="table-responsive mb-5">
+                    <table class="table table-bordered table-striped text-center">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Day</th>
+                                <th>Main Dish</th>
+                                <th>Side Dish</th>
+                                <th>Drink</th>
+                            </tr>
+
+
+                        </thead>
+                        <tbody>
+                            <tr><td>Sunday</td><td>Chicken Biryani</td><td>Salad</td><td>Juice</td></tr>
+                            <tr><td>Monday</td><td>White Rice with Chicken</td><td>Yogurt</td><td>Water</td></tr>
+                            <tr><td>Tuesday</td><td>Pasta</td><td>Garlic Bread</td><td>Juice</td></tr>
+                            <tr><td>Wednesday</td><td>Fish Rice</td><td>Pickles</td><td>Water</td></tr>
+                            <tr><td>Thursday</td><td>Beef Curry & Rice</td><td>Salad</td><td>Juice</td></tr>
+                        </tbody>
+                    </table>
+
+
                 </div>
 
 
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="Restaurant.html">Restaurant</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Announcements.html">Announcements</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Maintenance.html">Maintenance</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Locations.html">Locations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Events.html">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Questionnaire.html">Questionnaire page</a></li>
-                    <li class="nav-item"><a class="nav-link" href="calculate.html">calculate page</a></li>
-                    <li class="nav-item"><a class="nav-link" href="funpage.html">Fun page</a></li>
-                    <li class="nav-item"><a class="nav-link" href="About us.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Contact Us.html">Contact Us</a></li>
-                </ul>
+            </div>
+
+            <div id="dinnerTable">
+                <h3 class="mb-3 fw-bold">Dinner</h3>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped text-center">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Day</th>
+                                <th>Meal</th>
+                                <th>Drink</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Sunday</td><td>Chicken Wrap</td><td>Tea</td></tr>
+                            <tr><td>Monday</td><td>Egg Paratha</td><td>Milk</td></tr>
+                            <tr><td>Tuesday</td><td>Tuna Sandwich</td><td>Tea</td></tr>
+                            <tr><td>Wednesday</td><td>Vegetable Soup</td><td>Water</td></tr>
+                            <tr><td>Thursday</td><td>Hotdog</td><td>Juice</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
 
             </div>
-        </nav>
-    </header>
-
-
-
-    <section class="top" id="restaurant-top">
-        <div class="top-content-box">
-            <div class="top-text">
-                <h1>Restaurant</h1>
-            </div>
-        </div>
-    </section>
-
-
-
-    <section class="section1">
-        <h2>Welcome to the Student Campus Restaurant</h2>
-    </section>
-
-    <section class="section2">
-        <p>We provide nutritious and delicious meals every day. Explore our menus for breakfast, lunch, and dinner.</p>
-    </section>
-
-    <section class="section2">
-        <div class="menu">
-
-            <a href="WeekDays/Saturday.html" class="Restaurant">
-                <img src="Images/Restaurant_img/Saturday.jpg" alt="Saturday Menu">
-
-            </a>
-
-            <a href="WeekDays/Sunday.html" class="Restaurant">
-                <img src="Images/Restaurant_img/Sunday.jpg" alt="Sunday Menu">
-
-            </a>
-
-            <a href="WeekDays/Monday.html" class="Restaurant">
-                <img src="Images/Restaurant_img/Monday.jpg" alt="Monday Menu">
-
-            </a>
-
-            <a href="WeekDays/Tuesday.html" class="Restaurant">
-                <img src="Images/Restaurant_img/Tuesday.jpg" alt="Tuesday Menu">
-
-            </a>
-
-            <a href="WeekDays/Wednesday.html" class="Restaurant">
-                <img src="Images/Restaurant_img/Wednesday.jpg" alt="Wednesday Menu">
-
-            </a>
-
-            <a href="WeekDays/Thuresday.html" class="Restaurant">
-                <img src="Images/Restaurant_img/Thursday.jpg" alt="Thursday Menu">
-
-            </a>
-
-            <a href="WeekDays/Friday.html" class="Restaurant">
-                <img src="Images/Restaurant_img/Friday.jpg" alt="Friday Menu">
-
-            </a>
-
-        </div>
-    </section>
-
-
-
-    <section class="section1">
-        <h2>Restaurant Working Times & Open Restaurants</h2>
-    </section>
-
-    <section class="section2">
-
-
-        <h3>Weekdays (Sunday – Thursday)</h3>
-
-        <table style="margin: 20px auto; width: 70%; border-collapse: collapse; font-size: 1.1rem;">
-            <tr>
-                <th style="border: 1px solid #283848; padding: 10px;">Meal</th>
-                <th style="border: 1px solid #283848; padding: 10px;">Time</th>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #283848; padding: 10px;">Breakfast</td>
-                <td style="border: 1px solid #283848; padding: 10px;">6:00 AM – 9:00 AM</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #283848; padding: 10px;">Lunch</td>
-                <td style="border: 1px solid #283848; padding: 10px;">12:00 PM – 3:00 PM</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #283848; padding: 10px;">Dinner</td>
-                <td style="border: 1px solid #283848; padding: 10px;">7:00 PM – 9:00 PM</td>
-            </tr>
-        </table>
-
-        <h3>Weekends (Friday – Saturday)</h3>
-
-        <table style="margin: 20px auto; width: 70%; border-collapse: collapse; font-size: 1.1rem;">
-            <tr>
-                <th style="border: 1px solid #283848; padding: 10px;">Meal</th>
-                <th style="border: 1px solid #283848; padding: 10px;">Time</th>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #283848; padding: 10px;">Breakfast</td>
-                <td style="border: 1px solid #283848; padding: 10px;">8:00 AM – 10:00 AM</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #283848; padding: 10px;">Lunch</td>
-                <td style="border: 1px solid #283848; padding: 10px;">1:00 PM – 3:00 PM</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #283848; padding: 10px;">Dinner</td>
-                <td style="border: 1px solid #283848; padding: 10px;">7:00 PM – 9:00 PM</td>
-            </tr>
-        </table>
-
-        <hr style="margin: 40px auto; width: 60%; border: 1px solid #ccc;">
-
-
-        <h3>The Open Restaurants – Weekdays (Sunday – Thursday)</h3>
-
-        <table style="margin: 20px auto; width: 60%; border-collapse: collapse; font-size: 1.1rem;">
-            <tr>
-                <th style="border: 1px solid #283848; padding: 10px;">Restaurant</th>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #283848; padding: 10px;">Complex 1 Restaurant</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #283848; padding: 10px;">Complex 2 Central Restaurant</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #283848; padding: 10px;">Complex 3 Central Restaurant</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #283848; padding: 10px;">Complex 4 Central Restaurant</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #283848; padding: 10px;">Complex 5 Restaurant</td>
-            </tr>
-        </table>
-
-        <h3>The Open Restaurants – Weekends (Friday – Saturday)</h3>
-
-        <table style="margin: 20px auto; width: 60%; border-collapse: collapse; font-size: 1.1rem;">
-            <tr>
-                <th style="border: 1px solid #283848; padding: 10px;">Restaurant</th>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #283848; padding: 10px;">Complex 1 Restaurant</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #283848; padding: 10px;">Complex 2 Central Restaurant</td>
-            </tr>
-            <tr>
-                <td style="border: 1px solid #283848; padding: 10px;">Complex 3 Central Restaurant</td>
-            </tr>
-        </table>
-
-    </section>
 
 
 
 
-
-    <section class="section1">
-        <h2>Restaurant Feedback</h2>
-    </section>
-
-
-    <section class="section2">
-        <p>If you would like to share your opinion, please fill out the survey below.</p>
-        <div class="button-Restaurant">
-            <a href="Survey.html" class="service-button">Click here to take the Survey</a>
-        </div>
-    </section>
-
-
-    <footer class="main-footer text-light text-center p-3">
-        <p> © 2025 Student Complex </p>
-    </footer>
-
-</body>
+        </section>
 
 
 
 
+        <section>
+            <script>
+
+                function showBreakfast() {
+                    document.getElementById("breakfastTable").style.display = "block";
+                    document.getElementById("lunchTable").style.display = "none";
+                    document.getElementById("dinnerTable").style.display = "none";
+
+
+                }
+
+                function showLunch() {
+                    document.getElementById("breakfastTable").style.display = "none";
+                    document.getElementById("lunchTable").style.display = "block";
+                    document.getElementById("dinnerTable").style.display = "none";
+
+
+                }
+
+                function showDinner() {
+                    document.getElementById("breakfastTable").style.display = "none";
+                    document.getElementById("lunchTable").style.display = "none";
+                    document.getElementById("dinnerTable").style.display = "block";
+
+
+                }
+
+                function showAll() {
+                    document.getElementById("breakfastTable").style.display = "block";
+                    document.getElementById("lunchTable").style.display = "block";
+                    document.getElementById("dinnerTable").style.display = "block";
+
+
+                }
+
+            </script>
 
 
 
+        </section>
+
+    </body>
+
+
+    
 </html>
