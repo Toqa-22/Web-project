@@ -70,19 +70,19 @@
 
 
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Web_project/Restaurant.html">Restaurant</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Web_project/Restaurant.php">Restaurant</a></li>
                     <li class="nav-item"><a class="nav-link" href="Web_project/Announcements.html">Announcements</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="Web_project/Maintenance.html">Maintenance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Web_project/Maintenance.php">Maintenance</a></li>
                     <li class="nav-item"><a class="nav-link" href="Web_project/Locations.html">Locations</a></li>
                     <li class="nav-item"><a class="nav-link" href="Web_project/Events.html">Events</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Web_project/Questionnaire.html">Questionnaire
+                    <li class="nav-item"><a class="nav-link" href="Web_project/Questionnaire.php">Questionnaire
                             page</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Web_project/calculate.html">calculate page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Web_project/calculate.php">calculate page</a></li>
                     <li class="nav-item"><a class="nav-link" href="Web_project/funpage.html">Fun page</a></li>
                     <li class="nav-item"><a class="nav-link" href="Web_project/About us.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Web_project/Contact Us.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Web_project/Contact Us.php">Contact Us</a></li>
                 </ul>
 
             </div>
