@@ -128,13 +128,13 @@
                         <div class="card-body p-4">
 
 
-                            <form id="contactForm">
+                            <form id="contactForm" action="process_contactUsForm.php" method="post">
 
 
                                 
                                 <div class="mb-3">
-                                    <label class="form-label fw-bold">Your Name</label>
-                                    <input type="text" id="name" class="form-control" placeholder="Enter your name">
+                                    <label class="form-label fw-bold" for="name">Your Name</label>
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name">
 
                                     <small id="nameError" class="text-danger d-none">Name must be at least 3 letters.</small>
 
@@ -143,9 +143,9 @@
 
                             
                                 <div class="mb-3">
-                                    <label class="form-label fw-bold">Your Email</label>
+                                    <label class="form-label fw-bold" for="email">Your Email</label>
 
-                                    <input type="text" id="email" class="form-control" placeholder="Enter your email">
+                                    <input type="text" id="email" name="email" class="form-control" placeholder="Enter your email">
 
                                     <small id="emailError" class="text-danger d-none">Please enter a valid email.</small>
 
@@ -155,22 +155,21 @@
 
                             
                                 <div class="mb-3">
-                                    <label class="form-label fw-bold">Your Message</label>
-                                    <textarea id="message" rows="5" class="form-control" placeholder="Write your feedback here..."></textarea>
+                                    <label class="form-label fw-bold" for="message">Your Message</label>
+                                    <textarea id="message" name="message" rows="5" class="form-control" placeholder="Write your feedback here..."></textarea>
 
                                    <small id="messageError" class="text-danger d-none">Message must be at least 10 characters.</small>
 
 
                                 </div>
 
-                                <button type="button" class="btn btn-primary w-100 fw-bold" onclick="validateForm()">
+                                <button type="submit" class="btn btn-primary w-100 fw-bold" onclick="validateForm()">
                                     Send Feedback
 
                                 </button>
 
 
                             </form>
-
                         </div>
 
                     </div>
@@ -244,7 +243,7 @@
                     // If everything is valid
                     if (valid) {
                         alert("Feedback sent successfully. Thank you!");
-                        document.getElementById("contactForm").reset(); // clear form
+                        
                     }
                 }
 
