@@ -218,13 +218,13 @@
     <section class="container-fluid d-flex align-items-center justify-content-center section2">
         <div class="row ">
             <div class="col-6  p-5">
-                <a href="Web_project/Maintenance.html">
+                <a href="Web_project/Maintenance.php">
                     <button type="button" class="btn rounded-0 btn-outline-secondary">Maintenance
                         Request</button>
                 </a>
             </div>
             <div class="col-6 p-5">
-                <a href="Web_project/Survey.html">
+                <a href="Web_project/Survey.php">
                     <button type="button" class="btn rounded-0 mx-5 btn-outline-secondary">Restaurant
                         Feedback</button>
                 </a>
