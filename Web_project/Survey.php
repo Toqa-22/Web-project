@@ -132,7 +132,7 @@
 
                         <div class="card-body p-4">
 
-                            <form action="https://httpbin.org/get" method="get">
+                            <form action="process_surveyForm.php" method="post">
 
                                 <section class="mb-4">
                                     <h3 class="mb-3 fw-bold">Section 1: About You</h3>
