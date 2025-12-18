@@ -101,13 +101,13 @@
                         <p class="text-danger ">* Indicates required question</p>
                         <hr>
 
-                        <form action="mailto: campus.website@outlook.com" method="post" was-validated>
+                        <form action="process_maintenanceForm.php" method="post" was-validated>
                             <h6 class="fw-semibold mb-3">Informations</h6>
 
                             <div class="mb-3">
                                 <label for="fullName" class="form-label">Full Name <span
                                         class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="fullName" placeholder="Your answer"
+                                <input type="text" class="form-control" name="fullName" placeholder="Your answer"
                                     required>
                                 <div class="invalid-feedback">Please fill out this field.</div>
                             </div>
@@ -116,14 +116,14 @@
                                 <div class="col-md-6 mb-3">
                                     <label for="studentId" class="form-label">Student ID <span
                                             class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="studentId" placeholder="Your answer"
+                                    <input type="text" class="form-control" name="studentId" placeholder="Your answer"
                                         required>
                                     <div class="invalid-feedback">Please fill out this field.</div>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="roomNumber" class="form-label">Room Number <span
                                             class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="roomNumber" placeholder="Your answer"
+                                    <input type="text" class="form-control" name="roomNumber" placeholder="Your answer"
                                         required>
                                     <div class="invalid-feedback">Please fill out this field.</div>
                                 </div>
@@ -169,8 +169,8 @@
                                     <input class="form-check-input" type="checkbox" name="issueType" id="issueOther"
                                         value="Other">
                                     <label class="form-check-label" for="issueOther">Other:</label>
-                                    <textarea class="form-control" id="description" rows="4"
-                                        placeholder="Describe the issue in detail"></textarea>
+                                    <textarea class="form-control" name="description" rows="4"
+                                        placeholder="Describe the issue in detail" ></textarea>
                                 </div>
                                 <div class="invalid-feedback">Please fill out this field.</div>
                             </div>
