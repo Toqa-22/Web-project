@@ -98,24 +98,26 @@
                 <p class="text-muted text-center">Price per special item (Dress/Abaya): 1.000 OMR</p>
                 <hr>
 
-                <form id="billForm" >
+                <form id="billForm" action="process_calculateForm.php" method="post">
                     <div class="mb-3">
                         <label for="basicItems" class="form-label">Number of Shirts/Pants:</label>
-                        <input type="number" id="basicItems" class="form-control" min="0" value="0" required>
+                        <input type="number" name="basicItems" id="basicItems" class="form-control" min="0" value="0" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="specialItems" class="form-label">Number of Dresses/Abayas:</label>
-                        <input type="number" id="specialItems" class="form-control" min="0" value="0" required>
+                        <input type="number" name="specialItems" id="specialItems"  class="form-control" min="0" value="0" required>
                     </div>
 
                     <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="wantDelivary">
+                        <input type="checkbox" class="form-check-input" name="wantDelivary" id="wantDelivary">
                         <label class="form-check-label" for="wantDelivary">Do you want a delivery?</label>
                         <small class="text-info d-block">If yes, pay an extra delivery fee (1 OMR).</small>
                     </div>
                     
                     <button type="button" class="btn btn-success w-100 mt-3" onclick="calculateBill()">Calculate Bill</button>
+                    <button type="submit" class="btn btn-success w-100 mt-3" >Submit</button>
+
                 </form>
 
                 <div id="resultArea" class="mt-4 p-3 border rounded text-center bg-white" style="display: none;">
@@ -130,7 +132,56 @@
     <div id="main-footer" class="container-fluid d-flex text-white align-items-center justify-content-center">
         <p>&copy; 2025 Student Complex</p>
     </div>
+        <script>
+        function calculateBill() {
+            // 1. Retrieve values from the form fields
+            var basicCount = parseInt(document.getElementById('basicItems').value); // Number of shirts/pants
+            var specialCount = parseInt(document.getElementById('specialItems').value); // Number of dresses/abayas
+            var wantDelivary = document.getElementById('wantDelivary').checked; // Is the user want a Delivary
 
+            // Define the service prices (in Omani Riyal - OMR)
+            var BASIC_PRICE = 0.500; // 500 Baisa
+            var SPECIAL_PRICE = 1.000; // 1.000 OMR
+            var DELIVERY_FEE = 1.000; // Delivery fee for non-residents
+
+            
+            // Total cost for basic items
+            var basicCost = basicCount * BASIC_PRICE;
+            // Total cost for special items
+            var specialCost = specialCount * SPECIAL_PRICE;
+            // The initial total cost 
+            let totalInitialCost = basicCost + specialCost;
+
+            // Variable to store the final cost/fee message
+            let message = "";
+            let finalCost = totalInitialCost;
+
+            
+
+            // Condition : Is the user want a delivary? 
+            if (wantDelivary) {
+                // User is not a resident, apply the delivery fee
+                finalCost = finalCost + DELIVERY_FEE; 
+                message += "Delivery fee of 1.000 OMR has been added. ";
+            } else {
+                // User is a resident, delivery is free
+                message += "Delivery service is not added. ";
+            }
+
+            
+
+            // 2. Display the final result
+
+            // Use toFixed(3) to ensure the currency is displayed with three decimal places (Rials and Baisa)
+            document.getElementById('totalCost').innerHTML = "<strong>Total Final Bill: </strong>" +finalCost.toFixed(3) + "OMR";
+            document.getElementById('Message').innerText = message;
+
+
+            // Show the results area after calculation
+            document.getElementById('resultArea').style.display = 'block';
+            }
+
+    </script>
 
 </body>
 </html>
