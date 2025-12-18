@@ -234,12 +234,12 @@
     <section class="justify-content-center p-3">
         <div class="row ">
             <div class="col-md-4 col-12 text-center mb-3">
-                <a href="Web_project/Questionnaire.html">
+                <a href="Web_project/Questionnaire.php">
                     <button type="button" class="btn rounded-0 btn-outline-secondary w-100">Questionnaire</button>
                 </a>
             </div>
             <div class="col-md-4 col-12 text-center mb-3">
-                <a href="Web_project/calculate.html">
+                <a href="Web_project/calculate.php">
                     <button type="button" class="btn rounded-0 btn-outline-secondary w-100">Calculator</button>
                 </a>
             </div>
