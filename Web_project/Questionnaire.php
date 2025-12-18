@@ -161,7 +161,7 @@
 
 
 
-                            <form id="quizForm">
+                            <form id="quizForm" action="process_questionnaireForm.php" method="post">
 
 
                             
@@ -224,7 +224,7 @@
                             
                                 <section class="text-center">
 
-                                    <button type="button" class="btn fw-bold px-4" onclick="checkQuiz()">
+                                    <button type="submit" class="btn fw-bold px-4" onclick="checkQuiz()">
                                         Submit Answers
                                     </button>
 
