@@ -235,7 +235,7 @@
             <div class="container text-center fs-5">
 
                 <p>If you would like to share your opinion, please fill out the survey below.</p>
-                <a href="Survey.html" class="btn btn-purple fw-bold m-3">Click here to take the Survey</a>
+                <a href="Survey.php" class="btn btn-purple fw-bold m-3">Click here to take the Survey</a>
 
 
             </div>
