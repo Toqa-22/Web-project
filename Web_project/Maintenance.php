@@ -221,9 +221,9 @@
     <section class="container mb-5 text-center">
         <h5>Maintenance Database Operations</h5>
         <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
-            <a href="insert_issue.php" class="btn btn-primary">Insert Issue</a>
-            <a href="search_issues.php" class="btn btn-success">Search Issues</a>
-            <a href="delete_issue.php" class="btn btn-danger">Delete Issue</a>
+            <a href="insert.php" class="btn btn-secondary">Insert Issue</a>
+            <a href="search.php" class="btn btn-secondary">Search Issues</a>
+            <a href="delete.php" class="btn btn-secondary">Delete Issue</a>
             <a href="process_maintenanceForm.php" class="btn btn-secondary">View All Issues</a>
         </div>
     </section>
