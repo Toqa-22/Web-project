@@ -1,4 +1,3 @@
-
 <?php
 require_once 'db.php';
 
@@ -37,21 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 $sql = "SELECT * FROM laundry";
 $result = $conn->query($sql);
 
-echo "<table border='1'>";
-echo "<tr><th>ID</th><th>Basic Items</th><th>Special Items</th><th>Want Delivery</th></tr>";
-
-while ($row = $result->fetch_assoc()) {
-    echo "<tr>";
-    echo "<td>" . $row['id'] . "</td>";
-    echo "<td>" . $row['basic_items'] . "</td>";
-    echo "<td>" . $row['special_items'] . "</td>";
-    echo "<td>" . $row['want_delivery'] . "</td>";
-    echo "</tr>";
-}
-
-echo "</table>";
 
 $conn->close();
 ?>
-
 
