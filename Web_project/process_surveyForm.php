@@ -1,4 +1,5 @@
 <?php
+include "../db.php";
 class Feedback {
     public $college;
     public $year;
@@ -38,29 +39,57 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $feedback = new Feedback($college, $year, $freq, $quality, $taste, $food, $drinks, $suggestions);
-    $feedbacks[] = $feedback;
+    $stmt = $conn->prepare( "INSERT INTO feedback (college, year, freq, quality, taste, food, drinks, suggestions)
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?)" );
 
-    function printFeedbacks($feedbacks) {
-        echo "<table border='1'>";
-        echo "<tr><th>College</th><th>Year</th><th>Frequency</th><th>Quality</th><th>Taste</th><th>Food</th><th>Drinks</th><th>Suggestions</th></tr>";
-        foreach ($feedbacks as $feedback) {
-            echo "<tr>";
-            echo "<td>" . $feedback->college . "</td>";
-            echo "<td>" . $feedback->year . "</td>";
-            echo "<td>" . $feedback->freq . "</td>";
-            echo "<td>" . $feedback->quality . "</td>";
-            echo "<td>" . $feedback->taste . "</td>";
-            echo "<td>" . $feedback->food . "</td>";
-            echo "<td>" . $feedback->drinks . "</td>";
-            echo "<td>" . $feedback->suggestions . "</td>";
-            echo "</tr>";
-        }
-        echo "</table>";
-    }
+    $stmt->bind_param(
+        "ssssssss",
+        $college, $year, $freq, $quality,
+        $taste, $food, $drinks, $suggestions
+    );
 
-    printFeedbacks($feedbacks);
+    $stmt->execute();
+    $stmt->close();
+
+
+    
+
 }
+    
+$feedbacks = [];
+$result = $conn->query("SELECT * FROM feedback");
+
+while ($row = $result->fetch_assoc()) {
+    $feedbacks[] = new Feedback(
+        $row['college'],
+        $row['year'],
+        $row['freq'],
+        $row['quality'],
+        $row['taste'],
+        $row['food'],
+        $row['drinks'],
+        $row['suggestions']
+    );
+}
+
+function printFeedbacks($feedbacks) {
+    echo "<table border='1'>";
+    echo "<tr><th>College</th><th>Year</th><th>Frequency</th><th>Quality</th><th>Taste</th><th>Food</th><th>Drinks</th><th>Suggestions</th></tr>";
+    foreach ($feedbacks as $feedback) {
+        echo "<tr>";
+        echo "<td>" . $feedback->college . "</td>";
+        echo "<td>" . $feedback->year . "</td>";
+        echo "<td>" . $feedback->freq . "</td>";
+        echo "<td>" . $feedback->quality . "</td>";
+        echo "<td>" . $feedback->taste . "</td>";
+        echo "<td>" . $feedback->food . "</td>";
+        echo "<td>" . $feedback->drinks . "</td>";
+        echo "<td>" . $feedback->suggestions . "</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
+}
+
 
 function test_input($data) {
     $data = trim($data);
@@ -68,4 +97,6 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
+
+printFeedbacks($feedbacks);
 ?>

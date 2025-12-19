@@ -1,4 +1,5 @@
 <?php
+include "db.php";
 class Bill {
     public $basicItems;
     public $specialItems;
@@ -43,7 +44,22 @@ if (empty($basicItems) || empty($specialItems)) {
 }
 
 $bill = new Bill($basicItems, $specialItems, $wantDelivery);
-$bills[] = $bill;
+$bills = [];
+
+$result = $conn->query("SELECT * FROM bills");
+
+while ($row = $result->fetch_assoc()) {
+    $bills[] = new Bill(
+        $row['basicItems'],
+        $row['specialItems'],
+        $row['wantDelivery']
+    );
+}
+
+$sql = "INSERT INTO bills (basicItems, specialItems, wantDelivery, total)
+        VALUES ($basicItems, $specialItems, '$wantDelivery', $bill->total)";
+$conn->query($sql);
+
 
 function printBills($bills) {
     echo "<table border='1'>";
@@ -53,7 +69,7 @@ function printBills($bills) {
         echo "<td>" . $bill->basicItems . "</td>";
         echo "<td>" . $bill->specialItems . "</td>";
         echo "<td>" . $bill->wantDelivery . "</td>";
-        echo "<td>" . $bill->total . "</td>";
+        echo "<td>" . number_format($bill->total, 3) . " OMR</td>";
         echo "</tr>";
     }
     echo "</table>";

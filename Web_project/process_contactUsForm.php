@@ -1,4 +1,5 @@
 <?php
+include "db.php";
 class Feedback {
     public $name;
     public $email;
@@ -22,6 +23,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo 'Please fill out all fields';
         exit;
     }
+    
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Invalid email format";
+        exit;
+    }
 
     if (strlen($name) < 3) {
         echo 'Name must be at least 3 letters';
@@ -36,22 +42,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $feedback = new Feedback($name, $email, $message);
-    $feedbacks[] = $feedback;
+    $sql = "INSERT INTO feedback (name, email, message)
+        VALUES ('$name', '$email', '$message')";
+    $conn->query($sql);
 
-    function printFeedbacks($feedbacks) {
-        echo "<table border='1'>";
-        echo "<tr><th>Name</th><th>Email</th><th>Message</th></tr>";
-        foreach ($feedbacks as $feedback) {
-            echo "<tr>";
-            echo "<td>" . $feedback->name . "</td>";
-            echo "<td>" . $feedback->email . "</td>";
-            echo "<td>" . $feedback->message . "</td>";
-            echo "</tr>";
-        }
-        echo "</table>";
+    $feedbacks = [];
+
+    $result = $conn->query("SELECT * FROM feedback");
+
+    while ($row = $result->fetch_assoc()) {
+        $feedbacks[] = new Feedback(
+            $row['name'],
+            $row['email'],
+            $row['message']
+        );
     }
 
+
     printFeedbacks($feedbacks);
+}
+
+function printFeedbacks($feedbacks) {
+    echo "<table border='1'>";
+    echo "<tr><th>Name</th><th>Email</th><th>Message</th></tr>";
+    foreach ($feedbacks as $feedback) {
+        echo "<tr>";
+        echo "<td>" . $feedback->name . "</td>";
+        echo "<td>" . $feedback->email . "</td>";
+        echo "<td>" . $feedback->message . "</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
 }
 
 function test_input($data) {
