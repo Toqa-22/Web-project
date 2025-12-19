@@ -1,7 +1,7 @@
-
 <?php
 require_once 'db.php';
-$sql = "CREATE TABLE IF NOT EXISTS maintenanceRequest (
+
+$sql = "CREATE TABLE IF NOT EXISTS issues (
     id INT AUTO_INCREMENT PRIMARY KEY,
     full_name VARCHAR(255),
     student_id VARCHAR(255),
@@ -10,12 +10,7 @@ $sql = "CREATE TABLE IF NOT EXISTS maintenanceRequest (
     description TEXT,
     urgency INT
 )";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Table issues created successfully";
-} else {
-    echo "Error creating table: " . $conn->error;
-}
+$conn->query($sql);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $fullName = $_POST['fullName'];
@@ -28,13 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sql = "INSERT INTO issues (full_name, student_id, room_number, issue_type, description, urgency) VALUES (?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sssssi", $fullName, $studentId, $roomNumber, $issueType, $description, $urgency);
-
-    if ($stmt->execute() === TRUE) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $stmt->error;
-    }
-
+    $stmt->execute();
     $stmt->close();
 }
 

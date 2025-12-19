@@ -1,39 +1,46 @@
-<?php include "db.php"; ?>
+<?php
+require_once 'db.php';
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Add Product</title>
-</head>
-<body>
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $fullName = $_POST['fullName'];
+    $studentId = $_POST['studentId'];
+    $roomNumber = $_POST['roomNumber'];
+    $issueType = implode(", ", $_POST['issueType']);
+    $description = $_POST['description'];
+    $urgency = $_POST['urgency'];
 
-<h2>Add New Product</h2>
+    $sql = "INSERT INTO issues (full_name, student_id, room_number, issue_type, description, urgency) VALUES (?, ?, ?, ?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sssssi", $fullName, $studentId, $roomNumber, $issueType, $description, $urgency);
+    $stmt->execute();
+    $stmt->close();
+}
 
-<form method="post">
-    Name: <input type="text" name="name"><br><br>
-    Category: <input type="text" name="category"><br><br>
-    Price: <input type="number" step="0.01" name="price"><br><br>
-    Quantity: <input type="number" name="quantity"><br><br>
-    <input type="submit" name="add" value="Add Product">
+$sql = "SELECT * FROM issues";
+$result = $conn->query($sql);
+
+?>
+<form method="post" action="">
+    Full Name: <input type="text" name="fullName"><br>
+    Student ID: <input type="text" name="studentId"><br>
+    Room Number: <input type="text" name="roomNumber"><br>
+    Issue Type: <input type="text" name="issueType[]"><br>
+    Description: <input type="text" name="description"><br>
+    Urgency: <input type="number" name="urgency"><br>
+    <input type="submit" value="Add Issue">
 </form>
 
-<?php
-if (isset($_POST["add"])) {
-    $name = $_POST["name"];
-    $category = $_POST["category"];
-    $price = $_POST["price"];
-    $quantity = $_POST["quantity"];
-
-    $sql = "INSERT INTO products (name, category, price, quantity)
-            VALUES ('$name', '$category', '$price', '$quantity')";
-
-    if (mysqli_query($conn, $sql)) {
-        echo "Product added successfully.";
-    } else {
-        echo "Error.";
-    }
-}
-?>
-
-</body>
-</html>
+<table border="1">
+<tr><th>ID</th><th>Full Name</th><th>Student ID</th><th>Room</th><th>Issue Type</th><th>Description</th><th>Urgency</th></tr>
+<?php while ($row = $result->fetch_assoc()): ?>
+<tr>
+    <td><?php echo $row['id']; ?></td>
+    <td><?php echo $row['full_name']; ?></td>
+    <td><?php echo $row['student_id']; ?></td>
+    <td><?php echo $row['room_number']; ?></td>
+    <td><?php echo $row['issue_type']; ?></td>
+    <td><?php echo $row['description']; ?></td>
+    <td><?php echo $row['urgency']; ?></td>
+</tr>
+<?php endwhile; ?>
+</table>

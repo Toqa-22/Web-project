@@ -1,33 +1,35 @@
-<?php include "db.php"; ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Delete Product</title>
-</head>
-<body>
-
-<h2>Delete Product</h2>
-
-<form method="post">
-    Product ID:
-    <input type="number" name="id">
-    <input type="submit" name="delete" value="Delete">
-</form>
-
 <?php
-if (isset($_POST["delete"])) {
-    $id = $_POST["id"];
+require_once 'db.php';
 
-    $sql = "DELETE FROM products WHERE id = $id";
-
-    if (mysqli_query($conn, $sql)) {
-        echo "Product deleted successfully.";
-    } else {
-        echo "Error deleting product.";
-    }
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id'])) {
+    $id = $_POST['id'];
+    $sql = "DELETE FROM issues WHERE id=?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    $stmt->close();
 }
+
+$sql = "SELECT * FROM issues";
+$result = $conn->query($sql);
 ?>
 
-</body>
-</html>
+<form method="post" action="">
+    ID to Delete: <input type="number" name="id">
+    <input type="submit" value="Delete">
+</form>
+
+<table border="1">
+<tr><th>ID</th><th>Full Name</th><th>Student ID</th><th>Room</th><th>Issue Type</th><th>Description</th><th>Urgency</th></tr>
+<?php while ($row = $result->fetch_assoc()): ?>
+<tr>
+    <td><?php echo $row['id']; ?></td>
+    <td><?php echo $row['full_name']; ?></td>
+    <td><?php echo $row['student_id']; ?></td>
+    <td><?php echo $row['room_number']; ?></td>
+    <td><?php echo $row['issue_type']; ?></td>
+    <td><?php echo $row['description']; ?></td>
+    <td><?php echo $row['urgency']; ?></td>
+</tr>
+<?php endwhile; ?>
+</table>
