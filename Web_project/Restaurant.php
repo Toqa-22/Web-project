@@ -202,31 +202,144 @@
 
         </section>
 
-    
+            
         <section class="container py-4" id="tablesSection">
-
+        
             <h3 class="fw-bold mt-4">Weekdays (Sunday – Thursday)</h3>
+            
+            <?php
 
-            <div id="weekdayTimesTable"></div>
+            $sql = "SELECT meals.meal_name, meal_times.start_time, meal_times.end_time
+                    FROM meal_times
+                    JOIN meals ON meal_times.meal_id = meals.id
+                    JOIN days ON meal_times.day_id = days.id
+                    
+                    WHERE days.day_name IN ('Sunday','Monday','Tuesday','Wednesday','Thursday')";
+            
+            $result = $conn->query($sql);
+            
+            echo "<table class='table table-bordered table-striped w-75 mx-auto'>
+                    <thead class='table-dark'>
+                    
+                    <tr><th>Meal</th><th>Time</th></tr>
+                    
+                    </thead><tbody>";
+            
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>
+                        <td>{$row['meal_name']}</td>
+                        <td>{$row['start_time']} - {$row['end_time']}</td>
+                      </tr>";
+                
+            }
+
+            echo "</tbody></table>";
+
+            ?>
+
+
+
+
 
             <h3 class="fw-bold mt-4">Weekends (Friday – Saturday)</h3>
-            <div id="weekendTimesTable"></div>
+            
+            <?php
 
+            $sql = "SELECT meals.meal_name, meal_times.start_time, meal_times.end_time
+                    FROM meal_times
+                    JOIN meals ON meal_times.meal_id = meals.id
+                    JOIN days ON meal_times.day_id = days.id
+                    
+                    WHERE days.day_name IN ('Friday','Saturday')";
+            
+            $result = $conn->query($sql);
+
+            
+            echo "<table class='table table-bordered table-striped w-75 mx-auto'>
+                    <thead class='table-dark'>
+                    <tr><th>Meal</th><th>Time</th></tr>
+                    </thead><tbody>";
+
+            
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>
+                        <td>{$row['meal_name']}</td>
+                        <td>{$row['start_time']} - {$row['end_time']}</td>
+                      </tr>";
+                
+            }
+
+
+            echo "</tbody></table>";
+
+            ?>
+
+            
             <hr class="my-5">
-
-
-
+            
             <h3 class="fw-bold">Open Restaurants – Weekdays</h3>
 
-            <div id="weekdayRestaurantsTable"></div>
+            
+            <?php
+            $sql = "SELECT DISTINCT restaurants.restaurant_name
+                    FROM restaurant_availability
+                    JOIN restaurants ON restaurant_availability.restaurant_id = restaurants.id
+                    JOIN days ON restaurant_availability.day_id = days.id
+                    WHERE days.day_name IN ('Sunday','Monday','Tuesday','Wednesday','Thursday')";
 
 
+            $result = $conn->query($sql);
+            
+            echo "<table class='table table-bordered table-striped w-75 mx-auto'>
+                    <thead class='table-dark'><tr><th>Restaurant</th></tr></thead><tbody>";
+
+
+
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr><td>{$row['restaurant_name']}</td></tr>";
+                
+            }
+
+            echo "</tbody></table>";
+
+
+            ?>
+
+
+            
             <h3 class="fw-bold mt-4">Open Restaurants – Weekends</h3>
-            <div id="weekendRestaurantsTable"></div>
+
+
+            
+            <?php
+
+            $sql = "SELECT DISTINCT restaurants.restaurant_name
+                    FROM restaurant_availability
+                    JOIN restaurants ON restaurant_availability.restaurant_id = restaurants.id
+                    JOIN days ON restaurant_availability.day_id = days.id
+                    WHERE days.day_name IN ('Friday','Saturday')";
+            
+            $result = $conn->query($sql);
+
+
+
+            echo "<table class='table table-bordered table-striped w-75 mx-auto'>
+                    <thead class='table-dark'><tr><th>Restaurant</th></tr></thead><tbody>";
+            
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr><td>{$row['restaurant_name']}</td></tr>";
+                
+            }
+
+            echo "</tbody></table>";
+
+            ?>
 
 
 
 
+
+            
         </section>
 
 
@@ -262,93 +375,7 @@
 
         <section>
 
-            <script>
-
-                let weekdayTimes = [
-                    ["Breakfast", "6:00 AM – 9:00 AM"],
-                    ["Lunch", "12:00 PM – 3:00 PM"],
-                    ["Dinner", "7:00 PM – 9:00 PM"]
-
-                ];
-
-                let weekendTimes = [
-                    ["Breakfast", "8:00 AM – 10:00 AM"],
-                    ["Lunch", "1:00 PM – 3:00 PM"],
-                    ["Dinner", "7:00 PM – 9:00 PM"]
-                ];
-
-
-                let weekdayRestaurants = [
-                    "Complex 1 Restaurant",
-                    "Complex 2 Central Restaurant",
-                    "Complex 3 Central Restaurant",
-                    "Complex 4 Central Restaurant",
-                    "Complex 5 Restaurant"
-                ];
-
-
-                let weekendRestaurants = [
-
-                    "Complex 1 Restaurant",
-                    "Complex 2 Central Restaurant",
-                    "Complex 3 Central Restaurant"
-                ];
-
-                function generateTable(id, data, hasTime) {
-                    
-                    let html = `<table class='table table-bordered table-striped w-75 mx-auto'>
-                                    <thead class='table-dark'><tr>`;
-
-                    html += hasTime ? "<th>Meal</th><th>Time</th>" : "<th>Restaurant</th>";
-                    html += "</tr></thead><tbody>";
-
-
-                    for (let i = 0; i < data.length; i++) {
-                        html += "<tr>";
-
-                        if (hasTime) {
-                            html += `<td>${data[i][0]}</td><td>${data[i][1]}</td>`;
-
-                        } 
-                        
-                        else {
-                            html += `<td>${data[i]}</td>`;
-                        }
-
-
-                        html += "</tr>";
-
-
-                    }
-
-
-
-                    html += "</tbody></table>";
-                    document.getElementById(id).innerHTML = html;
-
-
-
-                }
-
-                generateTable("weekdayTimesTable", weekdayTimes, true);
-                generateTable("weekendTimesTable", weekendTimes, true);
-                generateTable("weekdayRestaurantsTable", weekdayRestaurants, false);
-                generateTable("weekendRestaurantsTable", weekendRestaurants, false);
-
-
-                function toggleTables() {
-                    let tables = document.getElementById("tablesSection");
-
-                    tables.style.display = (tables.style.display === "none") ? "block" : "none";
-
-
-                }
-
-
-
-
-            </script>
-
+            
 
 
         </section>
