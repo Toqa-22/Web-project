@@ -1,86 +1,62 @@
+
 <?php
-include "db.php";
-class Record {
-    public $fullName;
-    public $studentId;
-    public $roomNumber;
-    public $issueType;
-    public $description;
-    public $urgency;
+require_once 'db.php';
+$sql = "CREATE TABLE IF NOT EXISTS maintenanceRequest (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(255),
+    student_id VARCHAR(255),
+    room_number VARCHAR(255),
+    issue_type VARCHAR(255),
+    description TEXT,
+    urgency INT
+)";
 
-    function __construct($fullName, $studentId, $roomNumber, $issueType, $description, $urgency) {
-        $this->fullName = $fullName;
-        $this->studentId = $studentId;
-        $this->roomNumber = $roomNumber;
-        $this->issueType = $issueType;
-        $this->description = $description;
-        $this->urgency = $urgency;
-    }
+if ($conn->query($sql) === TRUE) {
+    echo "Table issues created successfully";
+} else {
+    echo "Error creating table: " . $conn->error;
 }
 
-$records = array();
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $fullName = $_POST['fullName'];
+    $studentId = $_POST['studentId'];
+    $roomNumber = $_POST['roomNumber'];
+    $issueType = implode(", ", $_POST['issueType']);
+    $description = $_POST['description'];
+    $urgency = $_POST['urgency'];
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $fullName = test_input($_POST["fullName"]);
-    $studentId = test_input($_POST["studentId"]);
-    $roomNumber = test_input($_POST["roomNumber"]);
-    $issueType = test_input($_POST["issueType"]);
-    $description = test_input($_POST["description"]);
-    $urgency = test_input($_POST["urgency"]);
+    $sql = "INSERT INTO issues (full_name, student_id, room_number, issue_type, description, urgency) VALUES (?, ?, ?, ?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sssssi", $fullName, $studentId, $roomNumber, $issueType, $description, $urgency);
 
-    if (empty($fullName) || empty($studentId) || empty($roomNumber) || empty($issueType) || empty($urgency)) {
-        echo 'Please fill out all fields';
-        exit;
+    if ($stmt->execute() === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $stmt->error;
     }
 
-    if (!is_numeric($studentId)) {
-        echo "Invalid student ID";
-        exit;
-    }
-
-    $record = new Record($fullName, $studentId, $roomNumber, $issueType, $description, $urgency);
-
-    $sql = "INSERT INTO records (fullName, studentId, roomNumber, issueType, description, urgency)
-            VALUES ('$fullName', '$studentId', '$roomNumber', '$issueType', '$description', '$urgency')";
-    $conn->query($sql);
-
-    $records = [];
-    $result = $conn->query("SELECT * FROM records");
-    while ($row = $result->fetch_assoc()) {
-        $records[] = new Record(
-            $row['fullName'],
-            $row['studentId'],
-            $row['roomNumber'],
-            $row['issueType'],
-            $row['description'],
-            $row['urgency']
-        );
-    }
-
-
-    printRecords($records);
+    $stmt->close();
 }
 
-function printRecords($records) {
-    echo "<table border='1'>";
-    echo "<tr><th>Full Name</th><th>Student ID</th><th>Room Number</th><th>Issue Type</th><th>Description</th><th>Urgency</th></tr>";
-    foreach ($records as $record) {
-        echo "<tr>";
-        echo "<td>" . $record->fullName . "</td>";
-        echo "<td>" . $record->studentId . "</td>";
-        echo "<td>" . $record->roomNumber . "</td>";
-        echo "<td>" . $record->issueType . "</td>";
-        echo "<td>" . $record->description . "</td>";
-        echo "<td>" . $record->urgency . "</td>";
-        echo "</tr>";
-    }
-    echo "</table>";
+$sql = "SELECT * FROM issues";
+$result = $conn->query($sql);
+
+echo "<table border='1'>";
+echo "<tr><th>ID</th><th>Full Name</th><th>Student ID</th><th>Room Number</th><th>Issue Type</th><th>Description</th><th>Urgency</th></tr>";
+
+while ($row = $result->fetch_assoc()) {
+    echo "<tr>";
+    echo "<td>" . $row['id'] . "</td>";
+    echo "<td>" . $row['full_name'] . "</td>";
+    echo "<td>" . $row['student_id'] . "</td>";
+    echo "<td>" . $row['room_number'] . "</td>";
+    echo "<td>" . $row['issue_type'] . "</td>";
+    echo "<td>" . $row['description'] . "</td>";
+    echo "<td>" . $row['urgency'] . "</td>";
+    echo "</tr>";
 }
 
-function test_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
+echo "</table>";
+
+$conn->close();
 ?>
