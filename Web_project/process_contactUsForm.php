@@ -1,84 +1,41 @@
 <?php
-include "db.php";
-class Feedback {
-    public $name;
-    public $email;
-    public $message;
+require_once 'db.php';
 
-    function __construct($name, $email, $message) {
-        $this->name = $name;
-        $this->email = $email;
-        $this->message = $message;
-    }
+$sql = "CREATE TABLE IF NOT EXISTS contact (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    email VARCHAR(255),
+    message TEXT
+)";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Table contact created successfully";
+} else {
+    echo "Error creating table: " . $conn->error;
 }
 
-$feedbacks = array();
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = test_input($_POST["name"]);
-    $email = test_input($_POST["email"]);
-    $message = test_input($_POST["message"]);
+    $sql = "INSERT INTO contact (name, email, message) VALUES (?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sss", $name, $email, $message);
 
-    if (empty($name) || empty($email) || empty($message)) {
-        echo 'Please fill out all fields';
-        exit;
-    }
-    
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "Invalid email format";
-        exit;
+    if ($stmt->execute() === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $stmt->error;
     }
 
-    if (strlen($name) < 3) {
-        echo 'Name must be at least 3 letters';
-        exit;
-    }
-
-    
-
-    if (strlen($message) < 10) {
-        echo 'Message must be at least 10 characters';
-        exit;
-    }
-
-    $feedback = new Feedback($name, $email, $message);
-    $sql = "INSERT INTO feedback (name, email, message)
-        VALUES ('$name', '$email', '$message')";
-    $conn->query($sql);
-
-    $feedbacks = [];
-
-    $result = $conn->query("SELECT * FROM feedback");
-
-    while ($row = $result->fetch_assoc()) {
-        $feedbacks[] = new Feedback(
-            $row['name'],
-            $row['email'],
-            $row['message']
-        );
-    }
-
-
-    printFeedbacks($feedbacks);
+    $stmt->close();
 }
 
-function printFeedbacks($feedbacks) {
-    echo "<table border='1'>";
-    echo "<tr><th>Name</th><th>Email</th><th>Message</th></tr>";
-    foreach ($feedbacks as $feedback) {
-        echo "<tr>";
-        echo "<td>" . $feedback->name . "</td>";
-        echo "<td>" . $feedback->email . "</td>";
-        echo "<td>" . $feedback->message . "</td>";
-        echo "</tr>";
-    }
-    echo "</table>";
-}
+$sql = "SELECT * FROM contact";
+$result = $conn->query($sql);
 
-function test_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
+
+
+$conn->close();
 ?>
