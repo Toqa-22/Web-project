@@ -1,7 +1,7 @@
+
 <?php
 require_once 'db.php';
-
-$sql = "CREATE TABLE IF NOT EXISTS issues (
+$sql = "CREATE TABLE IF NOT EXISTS maintenanceRequest (
     id INT AUTO_INCREMENT PRIMARY KEY,
     full_name VARCHAR(255),
     student_id VARCHAR(255),
@@ -10,7 +10,12 @@ $sql = "CREATE TABLE IF NOT EXISTS issues (
     description TEXT,
     urgency INT
 )";
-$conn->query($sql);
+
+if ($conn->query($sql) === TRUE) {
+    echo "Table maintenanceRequest created successfully";
+} else {
+    echo "Error creating table: " . $conn->error;
+}
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $fullName = $_POST['fullName'];
@@ -20,14 +25,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $description = $_POST['description'];
     $urgency = $_POST['urgency'];
 
-    $sql = "INSERT INTO issues (full_name, student_id, room_number, issue_type, description, urgency) VALUES (?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO maintenanceRequest (full_name, student_id, room_number, issue_type, description, urgency) VALUES (?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sssssi", $fullName, $studentId, $roomNumber, $issueType, $description, $urgency);
-    $stmt->execute();
+
+    if ($stmt->execute() === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+
     $stmt->close();
 }
 
-$sql = "SELECT * FROM issues";
+$sql = "SELECT * FROM maintenanceRequest";
 $result = $conn->query($sql);
 
 echo "<table border='1'>";
