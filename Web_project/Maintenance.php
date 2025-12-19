@@ -139,34 +139,34 @@
                                         class="text-danger">*</span></label>
 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="issueType"
-                                        id="issueElectrical" value="Electrical" required>
+                                    <input class="form-check-input" type="checkbox" name="issueType[]"
+                                        id="issueElectrical" value="Electrical" >
                                     <label class="form-check-label" for="issueElectrical">Electrical (lights, sockets,
                                         etc.)</label>
                                 </div>
 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="issueType" id="issuePlumbing"
+                                    <input class="form-check-input" type="checkbox" name="issueType[]" id="issuePlumbing"
                                         value="Plumbing">
                                     <label class="form-check-label" for="issuePlumbing">Plumbing (toilet, shower, sink,
                                         etc.)</label>
                                 </div>
 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="issueType" id="issueFurniture"
+                                    <input class="form-check-input" type="checkbox" name="issueType[]" id="issueFurniture"
                                         value="Furniture">
                                     <label class="form-check-label" for="issueFurniture">Furniture (bed, desk, chair,
                                         wardrobe, etc.)</label>
                                 </div>
 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="issueType" id="issueInternet"
+                                    <input class="form-check-input" type="checkbox" name="issueType[]" id="issueInternet"
                                         value="Internet">
                                     <label class="form-check-label" for="issueInternet">Internet / Wi-Fi</label>
                                 </div>
 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="issueType" id="issueOther"
+                                    <input class="form-check-input" type="checkbox" name="issueType[]" id="issueOther"
                                         value="Other">
                                     <label class="form-check-label" for="issueOther">Other:</label>
                                     <textarea class="form-control" name="description" rows="4"
