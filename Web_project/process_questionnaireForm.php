@@ -1,64 +1,46 @@
+
 <?php
-include "db.php";
-class QuizResult {
-    public $score;
-    public $total;
+require_once 'db.php';
 
-    function __construct($score, $total) {
-        $this->score = $score;
-        $this->total = $total;
-    }
+
+$sql = "CREATE TABLE IF NOT EXISTS quiz (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    q1 VARCHAR(255),
+    q2 VARCHAR(255),
+    q3 VARCHAR(255),
+    q4 VARCHAR(255),
+    q5 VARCHAR(255)
+)";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Table quiz created successfully";
+} else {
+    echo "Error creating table: " . $conn->error;
 }
 
-function test_input($data) {
-    return htmlspecialchars(stripslashes(trim($data)));
-}
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $q1 = $_POST['q1'];
+    $q2 = $_POST['q2'];
+    $q3 = $_POST['q3'];
+    $q4 = $_POST['q4'];
+    $q5 = $_POST['q5'];
 
-$answers = array(
-    'q1' => 'b',
-    'q2' => 'a',
-    'q3' => 'b',
-    'q4' => 'a',
-    'q5' => 'b'
-);
+    $sql = "INSERT INTO quiz (q1, q2, q3, q4, q5) VALUES (?, ?, ?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sssss", $q1, $q2, $q3, $q4, $q5);
 
-$score = 0;
-$total = count($answers);
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    foreach ($answers as $q => $correct) {
-        $user = isset($_POST[$q]) ? test_input($_POST[$q]) : '';
-        if ($user === $correct) {
-            $score++;
-        }
+    if ($stmt->execute() === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $stmt->error;
     }
 
-    $stmt = $conn->prepare(
-        "INSERT INTO quiz_results (score, total) VALUES (?, ?)"
-    );
-    $stmt->bind_param("ii", $score, $total);
-    $stmt->execute();
     $stmt->close();
 }
 
-
-$quizResults = [];
-$res = $conn->query("SELECT score, total FROM quiz_results");
-
-while ($row = $res->fetch_assoc()) {
-    $quizResults[] = new QuizResult($row['score'], $row['total']);
-}
+$sql = "SELECT * FROM quiz";
+$result = $conn->query($sql);
 
 
-function printQuizResults($list) {
-    echo "<table border='1'>";
-    echo "<tr><th>Score</th><th>Total</th></tr>";
-    foreach ($list as $obj) {
-        echo "<tr>";
-        echo "<td>{$obj->score}</td>";
-        echo "<td>{$obj->total}</td>";
-        echo "</tr>";
-    }
-    echo "</table>";
-}
+$conn->close();
 ?>
