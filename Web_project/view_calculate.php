@@ -1,8 +1,8 @@
 <?php
+
     include "db.php";
 
     $result = $conn->query("SELECT * FROM bills");
-
     echo "<h2>All Bills</h2>";
     echo "<table border='1'>";
     echo "<tr>
