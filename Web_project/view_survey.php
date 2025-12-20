@@ -16,6 +16,7 @@
         }
     }
 
+
     $list = [];
     $res = $conn->query("SELECT * FROM food_feedback");
 
@@ -27,12 +28,14 @@
         );
     }
 
+
+
     echo "<table border='1'>";
     echo "<tr>
-    <th>College</th><th>Year</th><th>Frequency</th>
-    <th>Quality</th><th>Taste</th><th>Food</th>
-    <th>Drinks</th><th>Suggestions</th>
-    </tr>";
+         <th>College</th><th>Year</th><th>Frequency</th>
+         <th>Quality</th><th>Taste</th><th>Food</th>
+         <th>Drinks</th><th>Suggestions</th>
+         </tr>";
 
     foreach ($list as $f) {
         echo "<tr>
