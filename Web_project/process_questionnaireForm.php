@@ -31,7 +31,7 @@
         $stmt->execute();
         $stmt->close();
 
-        header("Location: quiz.php?done=1");
+        header("Location: Questionnaire.php?done=1");
         exit;
     }
 ?>

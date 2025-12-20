@@ -35,7 +35,7 @@
         $stmt->execute();
         $stmt->close();
 
-        header("Location: feedback_form.php?done=1");
+        header("Location: Survey.php?done=1");
         exit;
     }
 ?>
