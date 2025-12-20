@@ -1,5 +1,5 @@
 <?php
-    require_once "../db.php";
+    include "db.php";
 
     class Feedback {
         public $college, $year, $freq, $quality, $taste, $food, $drinks, $suggestions;
@@ -17,7 +17,7 @@
     }
 
     $list = [];
-    $res = $conn->query("SELECT * FROM feedback");
+    $res = $conn->query("SELECT * FROM food_feedback");
 
     while ($r = $res->fetch_assoc()) {
         $list[] = new Feedback(

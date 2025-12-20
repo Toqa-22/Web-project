@@ -1,5 +1,5 @@
 <?php
-    require_once "../db.php";
+    require_once "db.php";
 
     function test_input($data) {
         return htmlspecialchars(stripslashes(trim($data)));
@@ -21,7 +21,7 @@
         }
 
         $stmt = $conn->prepare(
-            "INSERT INTO feedback 
+            "INSERT INTO food_feedback 
             (college, year, freq, quality, taste, food, drinks, suggestions)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
         );

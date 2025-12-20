@@ -1,5 +1,5 @@
 <?php
-    include "db.php";
+    require_once "db.php";
 
     function test_input($data) {
         return htmlspecialchars(stripslashes(trim($data)));
