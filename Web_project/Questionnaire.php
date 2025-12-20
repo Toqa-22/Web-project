@@ -1,53 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
 
-        <section>
+    <title>SQU Student Campus Housing - Questionnaire</title>
 
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width">
-
-            <title>SQU Student Campus Housing - Questionnaire</title>
-
-            
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 
 
-            <style>
-                body {
-                    background-color: rgb(225, 225, 222);
-                    font-family: Georgia, Times, 'Times New Roman', serif;
-                }
-                .main-footer {
-                    background-image: url("Images/footer.jpg");
-                    background-size: cover;
-                }
-                #question-banner {
-                    background-image: url("Images/Banner/ques.jpg");
-                    background-size: cover;
-                    height: 400px;
-                    display: flex;
+    <style>
+        body {
+            background-color: rgb(225, 225, 222);
+            font-family: Georgia, Times, 'Times New Roman', serif;
+        }
+        .main-footer {
+            background-image: url("Images/footer.jpg");
+            background-size: cover;
+        }
+        #question-banner {
+            background-image: url("Images/Banner/ques.jpg");
+            background-size: cover;
+            height: 400px;
+            display: flex;
 
-                }
+        }
 
-                .title {
-                    background-color: rgb(50, 50, 70);
-                    color: rgb(225, 225, 222);
-                }
-                .btn {
-                    background-color: rgb(50, 50, 70);
-                    color: rgb(225, 225, 222);
-                    min-width: 200px;
-                }
+        .title {
+            background-color: rgb(50, 50, 70);
+            color: rgb(225, 225, 222);
+        }
+        .btn {
+            background-color: rgb(50, 50, 70);
+            color: rgb(225, 225, 222);
+            min-width: 200px;
+        }
 
-            </style>
+    </style>
 
 
-
-        </section>
 
 
 
