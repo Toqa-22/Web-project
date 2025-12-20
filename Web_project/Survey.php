@@ -41,33 +41,20 @@
 </head>
 
 <body>
-
-
     <section>
-
         <header>
             <nav class="navbar navbar-expand-sm navbar-dark bg-black">
-
                 <div class="container-fluid">
-
                     <a class="navbar-brand d-flex align-items-center" href="#">
                         <img src="Images/logo_img/logo.jpg" width="80" class="rounded me-2">
                         <span>SQU Student Campus</span>
-
-
                     </a>
-
-
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks">
                         <span class="navbar-toggler-icon"></span>
-
                     </button>
-
                     <div class="collapse navbar-collapse" id="navLinks">
-
                         <ul class="navbar-nav ms-auto flex-wrap">
-
                             <li class="nav-item"><a class="nav-link" href="../index.php">Home</a></li>
                             <li class="nav-item"><a class="nav-link active" href="Restaurant.php">Restaurant</a></li>
                             <li class="nav-item"><a class="nav-link" href="Announcements.html">Announcements</a></li>
@@ -80,24 +67,10 @@
                             <li class="nav-item"><a class="nav-link" href="funpage.html">Fun page</a></li>
                             <li class="nav-item"><a class="nav-link" href="About us.html">About Us</a></li>
                             <li class="nav-item"><a class="nav-link" href="Contact Us.php">Contact Us</a></li>
-
-
-
                         </ul>
-
-
                     </div>
-
                 </div>
-
-
-
-
-
             </nav>
-
-
-
         </header>
 
 
@@ -117,31 +90,19 @@
 
 
     <section class="py-4 title text-light text-center">
-
         <h2 class="fw-bold">Survey: Food at the Girls Complex Restaurant – SQU</h2>
         <p class="mt-2">Your feedback will help improve the food quality and dining experience 🍽💬</p>
-
-
     </section>
 
 
     <section class="container py-5">
-
         <div class="row justify-content-center">
-
             <div class="col-md-10">
-
                 <div class="card shadow">
-
-
                     <div class="card-body p-4">
-
                         <form action="process_surveyForm.php" method="post">
-
                             <section class="mb-4">
                                 <h3 class="mb-3 fw-bold">Section 1: About You</h3>
-
-
                                 <p>Your college:</p>
                                 <div class="ms-3">
                                     <label><input type="radio" name="college" value="Science"> College of
@@ -157,15 +118,11 @@
                                     <label><input type="radio" name="college" value="Arts"> College of Arts & Social
                                         Sciences</label><br>
                                     <label><input type="radio" name="college" value="Law"> College of Law</label>
-
-
-
                                 </div>
 
                                 <hr>
 
                                 <p>Your academic year:</p>
-
                                 <div class="ms-3">
                                     <label><input type="radio" name="year" value="Foundation"> Foundation</label><br>
                                     <label><input type="radio" name="year" value="Year 1"> Year 1</label><br>
@@ -173,54 +130,30 @@
                                     <label><input type="radio" name="year" value="Year 3"> Year 3</label><br>
                                     <label><input type="radio" name="year" value="Year 4"> Year 4</label><br>
                                     <label><input type="radio" name="year" value="Other"> Other</label>
-
-
-
                                 </div>
-
-
-
                             </section>
 
 
                             <section class="mb-4">
                                 <h3 class="mb-3 fw-bold">Section 2: Food Quality and Taste</h3>
-
                                 <p>How often do you eat at the restaurant?</p>
-
-
                                 <div class="ms-3">
                                     <label><input type="radio" name="freq" value="Every day"> Every day</label><br>
                                     <label><input type="radio" name="freq" value="Few times a week"> A few times a
                                         week</label><br>
                                     <label><input type="radio" name="freq" value="Once a week"> Once a week</label><br>
                                     <label><input type="radio" name="freq" value="Rarely"> Rarely</label>
-
-
                                 </div>
-
                                 <hr>
-
-
                                 <p>Rate overall food quality (1–5)</p>
-
-
                                 <div class="ms-3">
                                     <label><input type="radio" name="quality" value="1"> 1</label>
                                     <label><input type="radio" name="quality" value="2"> 2</label>
                                     <label><input type="radio" name="quality" value="3"> 3</label>
                                     <label><input type="radio" name="quality" value="4"> 4</label>
                                     <label><input type="radio" name="quality" value="5"> 5</label>
-
-
                                 </div>
-
-
-
                                 <hr>
-
-
-
                                 <p>Rate taste of the food (1–5)</p>
                                 <div class="ms-3">
                                     <label><input type="radio" name="taste" value="1"> 1</label>
@@ -228,15 +161,8 @@
                                     <label><input type="radio" name="taste" value="3"> 3</label>
                                     <label><input type="radio" name="taste" value="4"> 4</label>
                                     <label><input type="radio" name="taste" value="5"> 5</label>
-
-
-
                                 </div>
-
-
-
                             </section>
-
 
                             <section class="mb-4">
                                 <h3 class="mb-3 fw-bold">Section 3: Preferences & Suggestions</h3>
@@ -250,13 +176,8 @@
                                     <label><input type="radio" name="food" value="Vegetarian"> Vegetarian
                                         food</label><br>
                                     <label><input type="radio" name="food" value="Healthy"> Healthy food</label>
-
-
-
                                 </div>
-
                                 <hr>
-
                                 <p>What drinks or desserts do you prefer?</p>
                                 <input type="text" class="form-control mb-3" name="drinks" placeholder="Short answer">
 
