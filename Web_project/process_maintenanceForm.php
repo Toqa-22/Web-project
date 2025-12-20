@@ -1,51 +1,27 @@
 <?php
 require_once 'db.php';
 
-$sql = "CREATE TABLE IF NOT EXISTS issues (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    full_name VARCHAR(255),
-    student_id VARCHAR(255),
-    room_number VARCHAR(255),
-    issue_type VARCHAR(255),
-    description TEXT,
-    urgency INT
-)";
-$conn->query($sql);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $fullName   = trim($_POST['fullName']);
+    $studentId  = trim($_POST['studentId']);
+    $roomNumber = trim($_POST['roomNumber']);
+    $issueType  = isset($_POST['issueType']) ? implode(", ", $_POST['issueType']) : "";
+    $description = trim($_POST['description']);
+    $urgency    = intval($_POST['urgency']);
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $fullName = $_POST['fullName'];
-    $studentId = $_POST['studentId'];
-    $roomNumber = $_POST['roomNumber'];
-    $issueType = implode(", ", $_POST['issueType']);
-    $description = $_POST['description'];
-    $urgency = $_POST['urgency'];
+    if ($fullName === "" || $studentId === "" || $roomNumber === "" || $issueType === "" || $urgency === 0) {
+        exit("Please fill out all required fields");
+    }
 
-    $sql = "INSERT INTO issues (full_name, student_id, room_number, issue_type, description, urgency) VALUES (?, ?, ?, ?, ?, ?)";
-    $stmt = $conn->prepare($sql);
+    $stmt = $conn->prepare(
+        "INSERT INTO issues (full_name, student_id, room_number, issue_type, description, urgency)
+         VALUES (?, ?, ?, ?, ?, ?)"
+    );
     $stmt->bind_param("sssssi", $fullName, $studentId, $roomNumber, $issueType, $description, $urgency);
     $stmt->execute();
     $stmt->close();
+
+    header("Location: Maintenance.php?success=1");
+    exit;
 }
-
-$sql = "SELECT * FROM issues";
-$result = $conn->query($sql);
-
-echo "<table border='1'>";
-echo "<tr><th>ID</th><th>Full Name</th><th>Student ID</th><th>Room Number</th><th>Issue Type</th><th>Description</th><th>Urgency</th></tr>";
-
-while ($row = $result->fetch_assoc()) {
-    echo "<tr>";
-    echo "<td>" . $row['id'] . "</td>";
-    echo "<td>" . $row['full_name'] . "</td>";
-    echo "<td>" . $row['student_id'] . "</td>";
-    echo "<td>" . $row['room_number'] . "</td>";
-    echo "<td>" . $row['issue_type'] . "</td>";
-    echo "<td>" . $row['description'] . "</td>";
-    echo "<td>" . $row['urgency'] . "</td>";
-    echo "</tr>";
-}
-
-echo "</table>";
-
-$conn->close();
 ?>

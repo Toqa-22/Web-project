@@ -1,82 +1,37 @@
 <?php
 include "db.php";
-class Bill {
-    public $basicItems;
-    public $specialItems;
-    public $wantDelivery;
-    public $total;
 
-    function __construct($basicItems, $specialItems, $wantDelivery) {
-        $this->basicItems = $basicItems;
-        $this->specialItems = $specialItems;
-        $this->wantDelivery = $wantDelivery;
-        $this->calculateTotal();
-    }
-
-    function calculateTotal() {
-        $basicPrice = 0.500; 
-        $specialPrice = 1; 
-        $deliveryFee = 1; 
-
-        $this->total = ($this->basicItems * $basicPrice) + ($this->specialItems * $specialPrice);
-        if ($this->wantDelivery == 'yes') {
-            $this->total += $deliveryFee;
-        }
-    }
+function clean($v) {
+    return htmlspecialchars(trim($v));
 }
 
-$bills = array();
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $basicItems   = clean($_POST["basicItems"]);
+    $specialItems = clean($_POST["specialItems"]);
+    $wantDelivery = isset($_POST["wantDelivary"]) ? "yes" : "no";
 
-
-$basicItems = $_POST["basicItems"];
-$specialItems = $_POST["specialItems"];
-$wantDelivery = $_POST["wantDelivary"];
-if (isset($wantDelivery)) {
-    $wantDelivery="yes";
+    if ($basicItems === "" || $specialItems === "") {
+        exit("Please fill out all fields");
     }
-else{
-    $wantDelivery="no";
-}
 
-if (empty($basicItems) || empty($specialItems)) {
-    echo 'Please fill out all fields';
+    $basicPrice = 0.500;
+    $specialPrice = 1;
+    $deliveryFee = 1;
+
+    $total = ($basicItems * $basicPrice) + ($specialItems * $specialPrice);
+    if ($wantDelivery === "yes") {
+        $total += $deliveryFee;
+    }
+
+    $stmt = $conn->prepare(
+        "INSERT INTO bills (basicItems, specialItems, wantDelivery, total)
+         VALUES (?, ?, ?, ?)"
+    );
+    $stmt->bind_param("iisd", $basicItems, $specialItems, $wantDelivery, $total);
+    $stmt->execute();
+    $stmt->close();
+
+    header("Location: calculate.php?success=1");
     exit;
 }
-
-$bill = new Bill($basicItems, $specialItems, $wantDelivery);
-$bills = [];
-
-$result = $conn->query("SELECT * FROM bills");
-
-while ($row = $result->fetch_assoc()) {
-    $bills[] = new Bill(
-        $row['basicItems'],
-        $row['specialItems'],
-        $row['wantDelivery']
-    );
-}
-
-$sql = "INSERT INTO bills (basicItems, specialItems, wantDelivery, total)
-        VALUES ($basicItems, $specialItems, '$wantDelivery', $bill->total)";
-$conn->query($sql);
-
-
-function printBills($bills) {
-    echo "<table border='1'>";
-    echo "<tr><th>Basic Items</th><th>Special Items</th><th>Want Delivery</th><th>Total</th></tr>";
-    foreach ($bills as $bill) {
-        echo "<tr>";
-        echo "<td>" . $bill->basicItems . "</td>";
-        echo "<td>" . $bill->specialItems . "</td>";
-        echo "<td>" . $bill->wantDelivery . "</td>";
-        echo "<td>" . number_format($bill->total, 3) . " OMR</td>";
-        echo "</tr>";
-    }
-    echo "</table>";
-}
-
-printBills($bills);
-
-
-
 ?>

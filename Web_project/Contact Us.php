@@ -1,274 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+<head>
 
-        <section>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width">
-            <title>SQU Student Campus Housing - Contact Us</title>
-    
-            
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    
-            <style>
-                body {
-                    background-color: rgb(225, 225, 222);
-                    font-family: Georgia, Times, 'Times New Roman', serif;
-                }
-                .main-footer {
-                    background-image: url("Images/footer.jpg");
-                    background-size: cover;
-                }
-                #contact-us-banner {
-                    background-image: url("Images/Banner/CONTACT US.jpg");
-                    background-size: cover;
-                    background-position: center;
-                    height: 350px;
-                }
-                .title {
-                    background-color: rgb(50, 50, 70);
-                    color: rgb(225, 225, 222);
-                }
-            </style>
-        </section>
-
-    </head>
-
-    <body>
-
-   
-        <section>
-
-            <header class="main-header">
-
-                <nav class="navbar navbar-expand-sm bg-black navbar-dark">
-
-                    <div class="container-fluid">
-
-                        <a class="navbar-brand d-flex align-items-center" href="#">
-                            <img src="Images/logo_img/logo.jpg" alt="SQU Logo" width="80" class="rounded me-2">
-
-                            <span>SQU Student Campus</span>
+    <section>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>SQU Student Campus Housing - Contact Us</title>
 
 
-                        </a>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks">
-                            <span class="navbar-toggler-icon"></span>
+        <style>
+            body {
+                background-color: rgb(225, 225, 222);
+                font-family: Georgia, Times, 'Times New Roman', serif;
+            }
 
-                        </button>
+            .main-footer {
+                background-image: url("Images/footer.jpg");
+                background-size: cover;
+            }
+
+            #contact-us-banner {
+                background-image: url("Images/Banner/CONTACT US.jpg");
+                background-size: cover;
+                background-position: center;
+                height: 350px;
+            }
+
+            .title {
+                background-color: rgb(50, 50, 70);
+                color: rgb(225, 225, 222);
+            }
+        </style>
+    </section>
+
+</head>
+
+<body>
+
+
+    <section>
+
+        <header class="main-header">
+
+            <nav class="navbar navbar-expand-sm bg-black navbar-dark">
+
+                <div class="container-fluid">
+
+                    <a class="navbar-brand d-flex align-items-center" href="#">
+                        <img src="Images/logo_img/logo.jpg" alt="SQU Logo" width="80" class="rounded me-2">
+
+                        <span>SQU Student Campus</span>
+
+
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks">
+                        <span class="navbar-toggler-icon"></span>
+
+                    </button>
 
 
 
-                        <div class="collapse navbar-collapse" id="navLinks">
+                    <div class="collapse navbar-collapse" id="navLinks">
 
-                            <ul class="navbar-nav">
-                                <li class="nav-item"><a class="nav-link" href="../index.php">Home</a></li>
-                                <li class="nav-item"><a class="nav-link" href="Restaurant.php">Restaurant</a></li>
-                                <li class="nav-item"><a class="nav-link" href="Announcements.html">Announcements</a></li>
-                                <li class="nav-item"><a class="nav-link" href="Maintenance.php">Maintenance</a></li>
-                                <li class="nav-item"><a class="nav-link" href="Locations.html">Locations</a></li>
-                                <li class="nav-item"><a class="nav-link" href="Events.html">Events</a></li>
-                                <li class="nav-item"><a class="nav-link" href="Questionnaire.php">Questionnaire page</a></li>
-                                <li class="nav-item"><a class="nav-link" href="calculate.php">calculate page</a></li>
-                                <li class="nav-item"><a class="nav-link" href="funpage.html">Fun page</a></li>
-                                <li class="nav-item"><a class="nav-link" href="About us.html">About Us</a></li>
-                                <li class="nav-item"><a class="nav-link active" href="Contact Us.php">Contact Us</a></li>
-                            </ul>
-
-
-                        </div>
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="../index.php">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Restaurant.php">Restaurant</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Announcements.html">Announcements</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Maintenance.php">Maintenance</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Locations.html">Locations</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Events.html">Events</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Questionnaire.php">Questionnaire page</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="calculate.php">calculate page</a></li>
+                            <li class="nav-item"><a class="nav-link" href="funpage.html">Fun page</a></li>
+                            <li class="nav-item"><a class="nav-link" href="About us.html">About Us</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="Contact Us.php">Contact Us</a></li>
+                        </ul>
 
 
                     </div>
 
-                </nav>
+
+                </div>
+
+            </nav>
 
 
-            </header>
+        </header>
 
 
-        </section>
-
-        
-        <section id="contact-us-banner" class="d-flex justify-content-center align-items-center text-white">
-            <div class="text-center bg-black bg-opacity-50 p-4 border border-3 border-white">
-
-                <h1 class="display-5 fw-bold">CONTACT US</h1>
+    </section>
 
 
-            </div>
+    <section id="contact-us-banner" class="d-flex justify-content-center align-items-center text-white">
+        <div class="text-center bg-black bg-opacity-50 p-4 border border-3 border-white">
+
+            <h1 class="display-5 fw-bold">CONTACT US</h1>
 
 
-        </section>
+        </div>
 
 
-        <section class="py-4 title text-light text-center">
-            <h2 class="fw-bold">Send Us Your Feedback</h2>
+    </section>
 
 
-        </section>
+    <section class="py-4 title text-light text-center">
+        <h2 class="fw-bold">Send Us Your Feedback</h2>
 
 
-        <section class="container py-5">
-            <p class="text-center fs-5 mb-4">
-                You can send us your comments or suggestions using the form below.
-
-            </p>
+    </section>
 
 
+    <section class="container py-5">
+        <p class="text-center fs-5 mb-4">
+            You can send us your comments or suggestions using the form below.
 
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-
-
-                    <div class="card shadow">
-                        <div class="card-body p-4">
-
-
-                            <form id="contactForm" action="process_contactUsForm.php" method="post">
-
-
-                                
-                                <div class="mb-3">
-                                    <label class="form-label fw-bold" for="name">Your Name</label>
-                                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name">
-
-                                    <small id="nameError" class="text-danger d-none">Name must be at least 3 letters.</small>
-
-
-                                </div>
-
-                            
-                                <div class="mb-3">
-                                    <label class="form-label fw-bold" for="email">Your Email</label>
-
-                                    <input type="text" id="email" name="email" class="form-control" placeholder="Enter your email">
-
-                                    <small id="emailError" class="text-danger d-none">Please enter a valid email.</small>
-
-                                </div>
+        </p>
 
 
 
-                            
-                                <div class="mb-3">
-                                    <label class="form-label fw-bold" for="message">Your Message</label>
-                                    <textarea id="message" name="message" rows="5" class="form-control" placeholder="Write your feedback here..."></textarea>
-
-                                   <small id="messageError" class="text-danger d-none">Message must be at least 10 characters.</small>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
 
 
-                                </div>
-
-                                <button type="submit" class="btn btn-primary w-100 fw-bold" onclick="validateForm()">
-                                    Send Feedback
-
-                                </button>
+                <div class="card shadow">
+                    <div class="card-body p-4">
 
 
-                            </form>
-                        </div>
+                        <form id="contactForm" action="process_contactUsForm.php" method="post">
 
+
+
+                            <div class="mb-3">
+                                <label class="form-label fw-bold" for="name">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-control"
+                                    placeholder="Enter your name">
+
+                                <small id="nameError" class="text-danger d-none">Name must be at least 3
+                                    letters.</small>
+
+
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label class="form-label fw-bold" for="email">Your Email</label>
+
+                                <input type="text" id="email" name="email" class="form-control"
+                                    placeholder="Enter your email">
+
+                                <small id="emailError" class="text-danger d-none">Please enter a valid email.</small>
+
+                            </div>
+
+
+
+
+                            <div class="mb-3">
+                                <label class="form-label fw-bold" for="message">Your Message</label>
+                                <textarea id="message" name="message" rows="5" class="form-control"
+                                    placeholder="Write your feedback here..."></textarea>
+
+                                <small id="messageError" class="text-danger d-none">Message must be at least 10
+                                    characters.</small>
+
+
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100 fw-bold" onclick="validateForm()">
+                                Send Feedback
+                            </button>
+
+
+                        </form>
                     </div>
 
                 </div>
 
             </div>
 
-
-        </section>
-        <section>
-            <script>
-
-                function validateForm() {
-
-                    // Get user input values and remove extra spaces
-                    let name = document.getElementById("name").value.trim();
-                    let email = document.getElementById("email").value.trim();
-                    let message = document.getElementById("message").value.trim();
-
-                    // Get the error message elements
-                    let nameErr = document.getElementById("nameError");
-                    let emailErr = document.getElementById("emailError");
-                    let msgErr = document.getElementById("messageError");
+        </div>
 
 
-                    // Hide all error messages at the start
-                    nameErr.classList.add("d-none");
-                    emailErr.classList.add("d-none");
-                    msgErr.classList.add("d-none");
-
-                    // Assume form is valid first
-                    let valid = true;
+    </section>
 
 
+    <section class="container mb-5 text-center">
+        <h5>Contact Us Database Operations</h5>
+        <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
+            <a href="db_Contact.php" class="btn btn-secondary">Contact Us  Database Operations</a>
+            <a href="view_contact.php" class="btn btn-secondary">View All Feedbacks</a>
+        </div>
+    </section>
+
+    <footer class="main-footer text-light text-center p-3">
+        <p> © 2025 Student Complex </p>
+    </footer>
+
+<script>
+
+    function validateForm() {
+
+        // Get user input values and remove extra spaces
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let message = document.getElementById("message").value.trim();
+
+        // Get the error message elements
+        let nameErr = document.getElementById("nameError");
+        let emailErr = document.getElementById("emailError");
+        let msgErr = document.getElementById("messageError");
 
 
+        // Hide all error messages at the start
+        nameErr.classList.add("d-none");
+        emailErr.classList.add("d-none");
+        msgErr.classList.add("d-none");
 
-
-                    // Validate name (must be at least 3 characters)
-                    if (name.length < 3) {
-                        nameErr.classList.remove("d-none"); // show error
-                        valid = false;
-                    }
-
-
-
-
-                    // Regular expression to check valid email format
-                    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        // Assume form is valid first
+        let valid = true;
 
 
 
 
-                    // Validate email (must match pattern)
-                    if (!emailPattern.test(email)) {
-                        emailErr.classList.remove("d-none"); // show error
-                        valid = false;
-                    }
+
+
+        // Validate name (must be at least 3 characters)
+        if (name.length < 3) {
+            nameErr.classList.remove("d-none"); // show error
+            valid = false;
+        }
 
 
 
-                    // Validate message (must be at least 10 characters)
-                    if (message.length < 10) {
-                        msgErr.classList.remove("d-none"); // show error
-                        valid = false;
-                    }
 
-
-                    
-                    // If everything is valid
-                    if (valid) {
-                        alert("Feedback sent successfully. Thank you!");
-                        
-                    }
-                }
-
-
-            </script>
+        // Regular expression to check valid email format
+        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 
 
-        </section>
+
+        // Validate email (must match pattern)
+        if (!emailPattern.test(email)) {
+            emailErr.classList.remove("d-none"); // show error
+            valid = false;
+        }
 
 
 
-      
+        // Validate message (must be at least 10 characters)
+        if (message.length < 10) {
+            msgErr.classList.remove("d-none"); // show error
+            valid = false;
+        }
 
-    </body>
 
 
-    
+        // If everything is valid
+        if (valid) {
+            alert("Feedback sent successfully. Thank you!");
+
+        }
+    }
+
+
+</script>
+
+
+
+
+
+</body>
+
+
+
 </html>
-
-
-
-
-
-
-
-
-

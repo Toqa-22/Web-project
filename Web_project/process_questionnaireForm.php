@@ -1,26 +1,17 @@
 <?php
-include "db.php";
-class QuizResult {
-    public $score;
-    public $total;
-
-    function __construct($score, $total) {
-        $this->score = $score;
-        $this->total = $total;
-    }
-}
+require_once "db.php";
 
 function test_input($data) {
     return htmlspecialchars(stripslashes(trim($data)));
 }
 
-$answers = array(
+$answers = [
     'q1' => 'b',
     'q2' => 'a',
     'q3' => 'b',
     'q4' => 'a',
     'q5' => 'b'
-);
+];
 
 $score = 0;
 $total = count($answers);
@@ -39,26 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt->bind_param("ii", $score, $total);
     $stmt->execute();
     $stmt->close();
-}
 
-
-$quizResults = [];
-$res = $conn->query("SELECT score, total FROM quiz_results");
-
-while ($row = $res->fetch_assoc()) {
-    $quizResults[] = new QuizResult($row['score'], $row['total']);
-}
-
-
-function printQuizResults($list) {
-    echo "<table border='1'>";
-    echo "<tr><th>Score</th><th>Total</th></tr>";
-    foreach ($list as $obj) {
-        echo "<tr>";
-        echo "<td>{$obj->score}</td>";
-        echo "<td>{$obj->total}</td>";
-        echo "</tr>";
-    }
-    echo "</table>";
+    header("Location: quiz.php?done=1");
+    exit;
 }
 ?>

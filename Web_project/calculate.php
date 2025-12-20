@@ -129,6 +129,15 @@
         </div>
     </section>
 
+    <section class="container mb-5 text-center">
+        <h5>Page Database Operations</h5>
+        <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
+            <a href="db_calcu.php" class="btn btn-secondary">Page Database Operations</a>
+            <a href="view_calculate.php" class="btn btn-secondary">View All Data</a>
+        </div>
+    </section>
+
+
     <div id="main-footer" class="container-fluid d-flex text-white align-items-center justify-content-center">
         <p>&copy; 2025 Student Complex</p>
     </div>

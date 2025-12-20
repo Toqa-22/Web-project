@@ -221,16 +221,15 @@
     <section class="container mb-5 text-center">
         <h5>Maintenance Database Operations</h5>
         <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
-            <a href="insert.php" class="btn btn-secondary">Insert Issue</a>
-            <a href="search.php" class="btn btn-secondary">Search Issues</a>
-            <a href="delete.php" class="btn btn-secondary">Delete Issue</a>
-            <a href="process_maintenanceForm.php" class="btn btn-secondary">View All Issues</a>
+            <a href="db_Maintenance.php" class="btn btn-secondary">Maintenance Database Operations</a>
+            <a href="view_maint.php" class="btn btn-secondary">View All Issues</a>
         </div>
     </section>
 
     <footer class="main-footer text-light text-center p-3">
         <p> © 2025 Student Complex </p>
     </footer>
+
 
 
 </body>
