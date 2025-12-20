@@ -211,6 +211,8 @@
                             </div>
                             <button type="reset" class="btn btn-outline-secondary">Clear form</button>
                             <button type="submit" class="btn btn-secondary ">Submit</button>
+                            <button type="submit" name="display" class="btn btn-secondary " >Submit and Display Records</button>
+
                         </form>
                     </div>
                 </div>
