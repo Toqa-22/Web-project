@@ -2,39 +2,33 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SQU Restaurant Survey</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: rgb(225, 225, 222);
+            font-family: Georgia, Times, 'Times New Roman', serif;
+        }
 
-    <section>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <title>SQU Restaurant Survey</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        .main-footer {
+            background-image: url("Images/footer.jpg");
+        }
 
-        <style>
-            body {
-                background-color: rgb(225, 225, 222);
-                font-family: Georgia, Times, 'Times New Roman', serif;
-            }
+        #survey-banner {
+            background-image: url("Images/Banner/Restaurant.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 350px;
+        }
 
-            .main-footer {
-                background-image: url("Images/footer.jpg");
-            }
-
-            #survey-banner {
-                background-image: url("Images/Banner/Restaurant.jpg");
-                background-size: cover;
-                background-position: center;
-                height: 350px;
-            }
-
-            .title {
-                background-color: rgb(50, 50, 70);
-                color: rgb(225, 225, 222);
-            }
-        </style>
-
-
-    </section>
+        .title {
+            background-color: rgb(50, 50, 70);
+            color: rgb(225, 225, 222);
+        }
+    </style>
 
 </head>
 
