@@ -206,7 +206,7 @@
             
         <section class="container py-4" id="tablesSection">
         
-            <h3 class="fw-bold mt-4">Weekdays (Sunday – Thursday)</h3>
+            <h3 class="fw-bold mt-4 text-center">Weekdays (Sunday – Thursday)</h3>
             
             <?php
 
@@ -242,7 +242,7 @@
 
 
 
-            <h3 class="fw-bold mt-4">Weekends (Friday – Saturday)</h3>
+            <h3 class="fw-bold mt-4 text-center">Weekends (Friday – Saturday)</h3>
             
             <?php
             $sql = "SELECT 
@@ -281,7 +281,7 @@
             
             <hr class="my-5">
             
-            <h3 class="fw-bold">Open Restaurants – Weekdays</h3>
+            <h3 class="fw-bold text-center">Open Restaurants – Weekdays</h3>
 
             
             <?php
@@ -311,7 +311,7 @@
 
 
             
-            <h3 class="fw-bold mt-4">Open Restaurants – Weekends</h3>
+            <h3 class="fw-bold mt-4 text-center">Open Restaurants – Weekends</h3>
 
 
             
@@ -386,13 +386,24 @@
 
 
 
+
+            <script>
+                function toggleTables() {
+                    var section = document.getElementById("tablesSection");
+
+                    if (section.style.display === "none") {
+                        section.style.display = "block";
+                    } else {
+                        section.style.display = "none";
+                    }
+                }
+            </script>
+
     </body>
 
 
 
 
 </html>
-
-
 
 
