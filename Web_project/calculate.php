@@ -15,6 +15,7 @@
 </head>
 <style>
     #main-footer {
+        
         background-image: url("Images/footer.jpg");
 
     }
