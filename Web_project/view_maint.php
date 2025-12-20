@@ -1,8 +1,7 @@
 <?php
     include "db.php";
 
-    
-    //create class to represent single record of a table
+//create class to represent single record of a table
     class Record {
         public $id;
         public $fullName;
@@ -23,7 +22,9 @@
         }
     }
 
-    //implement an array of records
+
+
+//implement an array of records
     function getRecords() {
         global $conn;
         $records = array();
@@ -38,7 +39,9 @@
         return $records;
     }
 
-    //implement function to iterate over the array and display table
+
+
+//implement function to iterate over the array and display table
     function displayRecords() {
         $records = getRecords();
         echo "<table border='1'>";
