@@ -2,7 +2,7 @@
     include "db.php";
 
     
-    //create class to rebresent single record of a table
+    //create class to represent single record of a table
     class Record {
         public $id;
         public $fullName;
