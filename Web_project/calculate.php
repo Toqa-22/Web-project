@@ -25,6 +25,7 @@
     body {
         background-color: rgb(225, 225, 222);
         font-family: Georgia, Times, 'Times New Roman', serif;
+        
     }
 
     #top {
