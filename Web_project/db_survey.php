@@ -119,5 +119,12 @@ if(isset($_POST['delete'])) {
     </form>
 </section>
 
+<section>
+    <br><br>
+    <a href="Survey.php">
+        <button type="button">Go back</button>
+    </a>
+</section>
+
 </body>
 </html>

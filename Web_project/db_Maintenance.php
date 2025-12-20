@@ -123,17 +123,22 @@ while($row = $result->fetch_assoc()) $allIssues[] = $row;
 </tr>
 <?php foreach($searchResults as $r): ?>
 <tr>
-<td><?php echo $r['id']; ?></td>
-<td><?php echo $r['full_name']; ?></td>
-<td><?php echo $r['student_id']; ?></td>
-<td><?php echo $r['room_number']; ?></td>
-<td><?php echo $r['issue_type']; ?></td>
-<td><?php echo $r['description']; ?></td>
-<td><?php echo $r['urgency']; ?></td>
+    <td><?php echo $r['id']; ?></td>
+    <td><?php echo $r['full_name']; ?></td>
+    <td><?php echo $r['student_id']; ?></td>
+    <td><?php echo $r['room_number']; ?></td>
+    <td><?php echo $r['issue_type']; ?></td>
+    <td><?php echo $r['description']; ?></td>
+    <td><?php echo $r['urgency']; ?></td>
 </tr>
 <?php endforeach; ?>
 </table>
 <?php endif; ?>
-
+<section>
+    <br><br>
+    <a href="Maintenance.php">
+        <button type="button">Go back</button>
+    </a>
+</section>
 </body>
 </html>

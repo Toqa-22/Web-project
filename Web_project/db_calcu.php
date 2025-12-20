@@ -106,7 +106,12 @@ while($row = $res->fetch_assoc()) {
         Bill ID to Delete: <input type="number" name="deleteId" required>
         <button type="submit" name="delete">Delete</button>
     </form>
-</section>
 
+<section>
+    <br><br>
+    <a href="calculate.php">
+        <button type="button">Go back</button>
+    </a>
+</section>
 </body>
 </html>

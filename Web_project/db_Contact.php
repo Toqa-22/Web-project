@@ -90,14 +90,20 @@ if(isset($_POST['search'])) {
 <tr><th>ID</th><th>Name</th><th>Email</th><th>Message</th></tr>
 <?php foreach($searchResults as $r): ?>
 <tr>
-<td><?php echo $r['id']; ?></td>
-<td><?php echo $r['name']; ?></td>
-<td><?php echo $r['email']; ?></td>
-<td><?php echo $r['message']; ?></td>
+    <td><?php echo $r['id']; ?></td>
+    <td><?php echo $r['name']; ?></td>
+    <td><?php echo $r['email']; ?></td>
+    <td><?php echo $r['message']; ?></td>
 </tr>
 <?php endforeach; ?>
 </table>
 <?php endif; ?>
 
+<section>
+    <br><br>
+    <a href="Contact Us.php">
+        <button type="button">Go back</button>
+    </a>
+</section>
 </body>
 </html>

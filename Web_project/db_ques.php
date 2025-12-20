@@ -98,5 +98,11 @@ while($row = $res->fetch_assoc()){
     </form>
 </section>
 
+<section>
+    <br><br>
+    <a href="Questionnaire.php">
+        <button type="button">Go back</button>
+    </a>
+</section>
 </body>
 </html>
