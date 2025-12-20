@@ -211,8 +211,7 @@
                             </div>
                             <button type="reset" class="btn btn-outline-secondary">Clear form</button>
                             <button type="submit" class="btn btn-secondary ">Submit</button>
-                            <button type="submit" name="display" class="btn btn-secondary " >Submit and Display Records</button>
-
+                           
                         </form>
                     </div>
                 </div>
@@ -224,7 +223,7 @@
         <h5>Maintenance Database Operations</h5>
         <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
             <a href="db_Maintenance.php" class="btn btn-secondary">Maintenance Database Operations</a>
-            <a href="view_maint.php" class="btn btn-secondary">View All Issues</a>
+            <a href="process_maintenanceForm.php?view=true" class="btn btn-secondary" >View All Issues</a>
         </div>
     </section>
 
