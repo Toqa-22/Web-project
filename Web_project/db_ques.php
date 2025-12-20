@@ -52,6 +52,30 @@ $res = $conn->query("SELECT id, score, total FROM quiz_results");
 while($row = $res->fetch_assoc()){
     $quizResults[] = new QuizResult($row['id'], $row['score'], $row['total']);
 }
+
+// Search Quiz Results
+$searchResults = [];
+
+if (isset($_POST['search'])) {
+    $minScore = intval($_POST['minScore']);
+
+    $stmt = $conn->prepare(
+        "SELECT id, score, total FROM quiz_results WHERE score >= ?"
+    );
+    $stmt->bind_param("i", $minScore);
+    $stmt->execute();
+    $res = $stmt->get_result();
+
+    while ($row = $res->fetch_assoc()) {
+        $searchResults[] = new QuizResult(
+            $row['id'],
+            $row['score'],
+            $row['total']
+        );
+    }
+    $stmt->close();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,25 +94,7 @@ while($row = $res->fetch_assoc()){
     </form>
 </section>
 
-<hr>
-
-<section>
-    <h2>Quiz Results</h2>
-    <table border="1">
-        <tr><th>ID</th><th>Score</th><th>Total</th></tr>
-        <?php
-        foreach($quizResults as $q){
-            echo "<tr>";
-            echo "<td>{$q->id}</td>";
-            echo "<td>{$q->score}</td>";
-            echo "<td>{$q->total}</td>";
-            echo "</tr>";
-        }
-        ?>
-    </table>
-</section>
-
-<hr>
+<br>
 
 <section>
     <h2>Delete Quiz Result</h2>
@@ -96,6 +102,38 @@ while($row = $res->fetch_assoc()){
         Quiz ID to Delete: <input type="number" name="deleteId" required>
         <button type="submit" name="delete">Delete</button>
     </form>
+</section>
+<br>
+
+<section>
+    <h2>Search Results</h2>
+    <form method="post">
+        Minimum Score:
+        <input type="number" name="minScore" required>
+        <button type="submit" name="search">Search</button>
+    </form>
+
+    <?php if (isset($_POST['search'])): ?>
+        <?php if (count($searchResults) > 0): ?>
+            <table border="1">
+                <tr>
+                    <th>ID</th>
+                    <th>Score</th>
+                    <th>Total</th>
+                </tr>
+
+                <?php foreach ($searchResults as $q): ?>
+                    <tr>
+                        <td><?= $q->id ?></td>
+                        <td><?= $q->score ?></td>
+                        <td><?= $q->total ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+        <?php else: ?>
+            <p>No results found.</p>
+        <?php endif; ?>
+    <?php endif; ?>
 </section>
 
 <section>

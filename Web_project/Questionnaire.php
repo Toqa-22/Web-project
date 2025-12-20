@@ -262,7 +262,7 @@
     <section class="container mb-5 text-center">
         <h5>Quiz Result Database Operations</h5>
         <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
-            <a href="db_survey.php" class="btn btn-secondary">Quiz Result Database Operations</a>
+            <a href="db_ques.php" class="btn btn-secondary">Quiz Result Database Operations</a>
             <a href="view_ques.php" class="btn btn-secondary">View All Answers</a>
         </div>
     </section>

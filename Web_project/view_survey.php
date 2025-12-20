@@ -8,7 +8,7 @@
 <body>
     <?php
         include "db.php";
-
+        echo "View All Feedbacks";
         class Feedback {
             public $college, $year, $freq, $quality, $taste, $food, $drinks, $suggestions;
 

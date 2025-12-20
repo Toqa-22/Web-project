@@ -79,7 +79,7 @@ if(isset($_POST['delete'])) {
     </form>
 </section>
 
-<hr>
+<br>
 
 <section>
     <h2>Search Feedback by Frequency</h2>
@@ -109,7 +109,7 @@ if(isset($_POST['delete'])) {
     ?>
 </section>
 
-<hr>
+<br>
 
 <section>
     <h2>Delete Feedback</h2>

@@ -8,7 +8,7 @@
 <body>
     <?php
         include "db.php";
-
+        echo "View All Answers";
         class QuizResult {
             public $score;
             public $total;

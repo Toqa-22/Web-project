@@ -58,6 +58,33 @@ $res = $conn->query("SELECT id, basicItems, specialItems, wantDelivery FROM bill
 while($row = $res->fetch_assoc()) {
     $bills[] = new Bill($row['id'], $row['basicItems'], $row['specialItems'], $row['wantDelivery']);
 }
+
+// Search Bills
+$searchResults = [];
+
+if (isset($_POST['search'])) {
+    $delivery = $_POST['searchDelivery'];
+
+    $stmt = $conn->prepare(
+        "SELECT id, basicItems, specialItems, wantDelivery 
+         FROM bills 
+         WHERE wantDelivery = ?"
+    );
+    $stmt->bind_param("s", $delivery);
+    $stmt->execute();
+    $res = $stmt->get_result();
+
+    while ($row = $res->fetch_assoc()) {
+        $searchResults[] = new Bill(
+            $row['id'],
+            $row['basicItems'],
+            $row['specialItems'],
+            $row['wantDelivery']
+        );
+    }
+    $stmt->close();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,27 +105,8 @@ while($row = $res->fetch_assoc()) {
     </form>
 </section>
 
-<hr>
 
-<section>
-    <h2>All Bills</h2>
-    <table border="1">
-        <tr><th>ID</th><th>Basic Items</th><th>Special Items</th><th>Delivery</th><th>Total</th></tr>
-        <?php
-        foreach($bills as $b){
-            echo "<tr>";
-            echo "<td>{$b->id}</td>";
-            echo "<td>{$b->basicItems}</td>";
-            echo "<td>{$b->specialItems}</td>";
-            echo "<td>{$b->wantDelivery}</td>";
-            echo "<td>".number_format($b->total,3)." OMR</td>";
-            echo "</tr>";
-        }
-        ?>
-    </table>
-</section>
-
-<hr>
+<br>
 
 <section>
     <h2>Delete Bill</h2>
@@ -106,6 +114,48 @@ while($row = $res->fetch_assoc()) {
         Bill ID to Delete: <input type="number" name="deleteId" required>
         <button type="submit" name="delete">Delete</button>
     </form>
+
+</section>
+
+<br>
+<section>
+    <h2>Search Bills</h2>
+    <form method="post">
+        Delivery:
+        <select name="searchDelivery" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <button type="submit" name="search">Search</button>
+    </form>
+</section>
+<?php if (isset($_POST['search'])): ?>
+    <h3>Search Results</h3>
+
+    <?php if (count($searchResults) > 0): ?>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Basic Items</th>
+                <th>Special Items</th>
+                <th>Delivery</th>
+                <th>Total</th>
+            </tr>
+
+            <?php foreach ($searchResults as $b): ?>
+                <tr>
+                    <td><?= $b->id ?></td>
+                    <td><?= $b->basicItems ?></td>
+                    <td><?= $b->specialItems ?></td>
+                    <td><?= $b->wantDelivery ?></td>
+                    <td><?= number_format($b->total, 2) ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    <?php else: ?>
+        <p>No results found.</p>
+    <?php endif; ?>
+<?php endif; ?>
 
 <section>
     <br><br>

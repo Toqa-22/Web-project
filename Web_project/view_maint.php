@@ -8,7 +8,7 @@
 <body>
     <?php
         include "db.php";
-
+        echo "View All Issues";
     //create class to represent single record of a table
         class Record {
             public $id;
