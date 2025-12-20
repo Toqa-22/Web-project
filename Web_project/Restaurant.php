@@ -245,34 +245,37 @@
             <h3 class="fw-bold mt-4">Weekends (Friday – Saturday)</h3>
             
             <?php
-
-            $sql = "SELECT meals.meal_name, meal_times.start_time, meal_times.end_time
-                    FROM meal_times
-                    JOIN meals ON meal_times.meal_id = meals.id
-                    JOIN days ON meal_times.day_id = days.id
-                    
-                    WHERE days.day_name IN ('Friday','Saturday')";
+            $sql = "SELECT 
+                        m.meal_name,
+                        MIN(mt.start_time) AS start_time,
+                        MIN(mt.end_time) AS end_time
+                    FROM meals m
+                    LEFT JOIN meal_times mt ON mt.meal_id = m.id
+                    LEFT JOIN days d ON d.id = mt.day_id AND d.day_name IN ('Friday','Saturday')
+                    GROUP BY m.id, m.meal_name
+                    ORDER BY FIELD(m.meal_name, 'Breakfast', 'Lunch', 'Dinner')";
             
             $result = $conn->query($sql);
-
             
             echo "<table class='table table-bordered table-striped w-75 mx-auto'>
                     <thead class='table-dark'>
                     <tr><th>Meal</th><th>Time</th></tr>
                     </thead><tbody>";
-
             
             while ($row = $result->fetch_assoc()) {
+                $timeText = "N/A";
+            
+                if (!empty($row['start_time']) && !empty($row['end_time'])) {
+                    $timeText = "{$row['start_time']} - {$row['end_time']}";
+                }
+            
                 echo "<tr>
                         <td>{$row['meal_name']}</td>
-                        <td>{$row['start_time']} - {$row['end_time']}</td>
+                        <td>$timeText</td>
                       </tr>";
-                
             }
-
-
+            
             echo "</tbody></table>";
-
             ?>
 
             
