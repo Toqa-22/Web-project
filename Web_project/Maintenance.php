@@ -223,7 +223,7 @@
         <h5>Maintenance Database Operations</h5>
         <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
             <a href="db_Maintenance.php" class="btn btn-secondary">Maintenance Database Operations</a>
-            <a href="process_maintenanceForm.php?view=true" class="btn btn-secondary" >View All Issues</a>
+            <a href="view_maint.php" class="btn btn-secondary" >View All Issues</a>
         </div>
     </section>
 
